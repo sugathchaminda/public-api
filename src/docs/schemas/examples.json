@@ -1,0 +1,2250 @@
+{
+  "ErrorExamples": {
+    "AbstractXML": {
+      "summary": "XML error response",
+      "value": "<error>\n\t<status>string</status>\n\t<type>string</type>\n\t<data>string or null</data>\n\t<metadata>object or null</metadata>\n</error>"
+    }
+  },
+  "InvoiceExamples": {
+    "TrivialJsonArray": {
+      "summary": "Array of single invoice",
+      "value": {
+        "Invoices": [
+          {
+            "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+            "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "Invoice": [
+              {
+                "ID": [
+                  {
+                    "_": "TOSL108"
+                  }
+                ],
+                "IssueDate": [
+                  {
+                    "_": "2011-09-22"
+                  }
+                ],
+                "DocumentCurrencyCode": [
+                  {
+                    "_": "CAD",
+                    "listID": "ISO 4217 Alpha",
+                    "listAgencyID": "6"
+                  }
+                ],
+                "InvoicePeriod": [
+                  {
+                    "StartDate": [
+                      {
+                        "_": "2011-08-01"
+                      }
+                    ],
+                    "EndDate": [
+                      {
+                        "_": "2011-08-31"
+                      }
+                    ]
+                  }
+                ],
+                "AccountingSupplierParty": [
+                  {
+                    "Party": [
+                      {
+                        "PartyName": [
+                          {
+                            "Name": [
+                              {
+                                "_": "Custom Cotter Pins"
+                              }
+                            ]
+                          }
+                        ],
+                        "PostalAddress": [
+                          {
+                            "ID": [
+                              {
+                                "_": "1231412341324",
+                                "schemeID": "GLN",
+                                "schemeAgencyID": "9"
+                              }
+                            ],
+                            "Postbox": [
+                              {
+                                "_": "5467"
+                              }
+                            ],
+                            "StreetName": [
+                              {
+                                "_": "Main street"
+                              }
+                            ],
+                            "AdditionalStreetName": [
+                              {
+                                "_": "Suite 123"
+                              }
+                            ],
+                            "BuildingNumber": [
+                              {
+                                "_": "1"
+                              }
+                            ],
+                            "Department": [
+                              {
+                                "_": "Revenue department"
+                              }
+                            ],
+                            "CityName": [
+                              {
+                                "_": "Big city"
+                              }
+                            ],
+                            "PostalZone": [
+                              {
+                                "_": "54321"
+                              }
+                            ],
+                            "CountrySubentityCode": [
+                              {
+                                "_": "RegionA"
+                              }
+                            ],
+                            "Country": [
+                              {
+                                "IdentificationCode": [
+                                  {
+                                    "_": "DK",
+                                    "listID": "ISO3166-1",
+                                    "listAgencyID": "6"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "PartyLegalEntity": [
+                          {
+                            "RegistrationName": [
+                              {
+                                "_": "The Sellercompany Incorporated"
+                              }
+                            ],
+                            "CompanyID": [
+                              {
+                                "_": "Supp123",
+                                "schemeID": "ZZZ",
+                                "schemeAgencyID": "ZZZ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "AccountingCustomerParty": [
+                  {
+                    "Party": [
+                      {
+                        "PartyName": [
+                          {
+                            "Name": [
+                              {
+                                "_": "North American Veeblefetzer"
+                              }
+                            ]
+                          }
+                        ],
+                        "PartyIdentification": [
+                          {
+                            "ID": [
+                              {
+                                "_": "Supp231",
+                                "schemeID": "ZZZ"
+                              }
+                            ]
+                          }
+                        ],
+                        "PostalAddress": [
+                          {
+                            "CityName": [
+                              {
+                                "_": "Small city"
+                              }
+                            ],
+                            "PostalZone": [
+                              {
+                                "_": "12354"
+                              }
+                            ],
+                            "Country": [
+                              {
+                                "IdentificationCode": [
+                                  {
+                                    "_": "DK",
+                                    "listID": "ISO3166-1",
+                                    "listAgencyID": "6"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "TaxTotal": [
+                  {
+                    "TaxAmount": [
+                      {
+                        "_": 25.00,
+                        "currencyID": "CAD"
+                      }
+                    ]
+                  }
+                ],
+                "LegalMonetaryTotal": [
+                  {
+                    "PayableAmount": [
+                      {
+                        "_": 100.00,
+                        "currencyID": "CAD"
+                      }
+                    ],
+                    "TaxInclusiveAmount": [
+                      {
+                        "_": 100.00,
+                        "currencyID": "CAD"
+                      }
+                    ],
+                    "TaxExclusiveAmount": [
+                      {
+                        "_": 75.00,
+                        "currencyID": "CAD"
+                      }
+                    ]
+                  }
+                ],
+                "InvoiceLine": [
+                  {
+                    "ID": [
+                      {
+                        "_": "1"
+                      }
+                    ],
+                    "LineExtensionAmount": [
+                      {
+                        "_": 100.00,
+                        "currencyID": "CAD"
+                      }
+                    ],
+                    "Item": [
+                      {
+                        "Description": [
+                          {
+                            "_": "Cotter pin, MIL-SPEC"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "TrivialJson": {
+      "summary": "A trivial invoice in UBL 2.1 json format",
+      "value": {
+        "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+        "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        "Invoice": [
+          {
+            "ID": [
+              {
+                "_": "TOSL108"
+              }
+            ],
+            "IssueDate": [
+              {
+                "_": "2011-09-22"
+              }
+            ],
+            "DocumentCurrencyCode": [
+              {
+                "_": "CAD",
+                "listID": "ISO 4217 Alpha",
+                "listAgencyID": "6"
+              }
+            ],
+            "InvoicePeriod": [
+              {
+                "StartDate": [
+                  {
+                    "_": "2011-08-01"
+                  }
+                ],
+                "EndDate": [
+                  {
+                    "_": "2011-08-31"
+                  }
+                ]
+              }
+            ],
+            "AccountingSupplierParty": [
+              {
+                "Party": [
+                  {
+                    "PartyName": [
+                      {
+                        "Name": [
+                          {
+                            "_": "Custom Cotter Pins"
+                          }
+                        ]
+                      }
+                    ],
+                    "PostalAddress": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1231412341324",
+                            "schemeID": "GLN",
+                            "schemeAgencyID": "9"
+                          }
+                        ],
+                        "Postbox": [
+                          {
+                            "_": "5467"
+                          }
+                        ],
+                        "StreetName": [
+                          {
+                            "_": "Main street"
+                          }
+                        ],
+                        "AdditionalStreetName": [
+                          {
+                            "_": "Suite 123"
+                          }
+                        ],
+                        "BuildingNumber": [
+                          {
+                            "_": "1"
+                          }
+                        ],
+                        "Department": [
+                          {
+                            "_": "Revenue department"
+                          }
+                        ],
+                        "CityName": [
+                          {
+                            "_": "Big city"
+                          }
+                        ],
+                        "PostalZone": [
+                          {
+                            "_": "54321"
+                          }
+                        ],
+                        "CountrySubentityCode": [
+                          {
+                            "_": "RegionA"
+                          }
+                        ],
+                        "Country": [
+                          {
+                            "IdentificationCode": [
+                              {
+                                "_": "DK",
+                                "listID": "ISO3166-1",
+                                "listAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyLegalEntity": [
+                      {
+                        "RegistrationName": [
+                          {
+                            "_": "The Sellercompany Incorporated"
+                          }
+                        ],
+                        "CompanyID": [
+                          {
+                            "_": "Supp123",
+                            "schemeID": "ZZZ",
+                            "schemeAgencyID": "ZZZ"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "AccountingCustomerParty": [
+              {
+                "Party": [
+                  {
+                    "PartyName": [
+                      {
+                        "Name": [
+                          {
+                            "_": "North American Veeblefetzer"
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "Supp231",
+                            "schemeID": "ZZZ"
+                          }
+                        ]
+                      }
+                    ],
+                    "PostalAddress": [
+                      {
+                        "CityName": [
+                          {
+                            "_": "Small city"
+                          }
+                        ],
+                        "PostalZone": [
+                          {
+                            "_": "12354"
+                          }
+                        ],
+                        "Country": [
+                          {
+                            "IdentificationCode": [
+                              {
+                                "_": "DK",
+                                "listID": "ISO3166-1",
+                                "listAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "TaxTotal": [
+              {
+                "TaxAmount": [
+                  {
+                    "_": 25.00,
+                    "currencyID": "CAD"
+                  }
+                ]
+              }
+            ],
+            "LegalMonetaryTotal": [
+              {
+                "PayableAmount": [
+                  {
+                    "_": 100.00,
+                    "currencyID": "CAD"
+                  }
+                ],
+                "TaxInclusiveAmount": [
+                  {
+                    "_": 100.00,
+                    "currencyID": "CAD"
+                  }
+                ],
+                "TaxExclusiveAmount": [
+                  {
+                    "_": 75.00,
+                    "currencyID": "CAD"
+                  }
+                ]
+              }
+            ],
+            "InvoiceLine": [
+              {
+                "ID": [
+                  {
+                    "_": "1"
+                  }
+                ],
+                "LineExtensionAmount": [
+                  {
+                    "_": 100.00,
+                    "currencyID": "CAD"
+                  }
+                ],
+                "Item": [
+                  {
+                    "Description": [
+                      {
+                        "_": "Cotter pin, MIL-SPEC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "FullJson": {
+      "summary": "A full invoice in UBL 2.1 json format",
+      "value": {
+        "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+        "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        "Invoice": [
+          {
+            "UBLVersionID": [
+              {
+                "_": "2.1"
+              }
+            ],
+            "ID": [
+              {
+                "_": "TOSL108"
+              }
+            ],
+            "IssueDate": [
+              {
+                "_": "2009-12-15"
+              }
+            ],
+            "InvoiceTypeCode": [
+              {
+                "_": "380",
+                "listID": "UN/ECE 1001 Subset",
+                "listAgencyID": "6"
+              }
+            ],
+            "Note": [
+              {
+                "_": "Ordered in our booth at the convention.",
+                "languageID": "en"
+              }
+            ],
+            "TaxPointDate": [
+              {
+                "_": "2009-11-30"
+              }
+            ],
+            "DocumentCurrencyCode": [
+              {
+                "_": "EUR",
+                "listID": "ISO 4217 Alpha",
+                "listAgencyID": "6"
+              }
+            ],
+            "AccountingCost": [
+              {
+                "_": "Project cost code 123"
+              }
+            ],
+            "InvoicePeriod": [
+              {
+                "StartDate": [
+                  {
+                    "_": "2009-11-01"
+                  }
+                ],
+                "EndDate": [
+                  {
+                    "_": "2009-11-30"
+                  }
+                ]
+              }
+            ],
+            "OrderReference": [
+              {
+                "ID": [
+                  {
+                    "_": "123"
+                  }
+                ]
+              }
+            ],
+            "ContractDocumentReference": [
+              {
+                "ID": [
+                  {
+                    "_": "Contract321"
+                  }
+                ],
+                "DocumentType": [
+                  {
+                    "_": "Framework agreement"
+                  }
+                ]
+              }
+            ],
+            "AdditionalDocumentReference": [
+              {
+                "ID": [
+                  {
+                    "_": "Doc1"
+                  }
+                ],
+                "DocumentType": [
+                  {
+                    "_": "Timesheet"
+                  }
+                ],
+                "Attachment": [
+                  {
+                    "ExternalReference": [
+                      {
+                        "URI": [
+                          {
+                            "_": "http://www.suppliersite.eu/sheet001.html"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ID": [
+                  {
+                    "_": "Doc2"
+                  }
+                ],
+                "DocumentType": [
+                  {
+                    "_": "Drawing"
+                  }
+                ],
+                "Attachment": [
+                  {
+                    "EmbeddedDocumentBinaryObject": [
+                      {
+                        "_": "UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi",
+                        "mimeCode": "application/pdf"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "AccountingSupplierParty": [
+              {
+                "Party": [
+                  {
+                    "EndpointID": [
+                      {
+                        "_": "1234567890123",
+                        "schemeID": "GLN",
+                        "schemeAgencyID": "9"
+                      }
+                    ],
+                    "PartyIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "Supp123",
+                            "schemeID": "ZZZ"
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyName": [
+                      {
+                        "Name": [
+                          {
+                            "_": "Salescompany ltd."
+                          }
+                        ]
+                      }
+                    ],
+                    "PostalAddress": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1231412341324",
+                            "schemeID": "GLN",
+                            "schemeAgencyID": "9"
+                          }
+                        ],
+                        "Postbox": [
+                          {
+                            "_": "5467"
+                          }
+                        ],
+                        "StreetName": [
+                          {
+                            "_": "Main street"
+                          }
+                        ],
+                        "AdditionalStreetName": [
+                          {
+                            "_": "Suite 123"
+                          }
+                        ],
+                        "BuildingNumber": [
+                          {
+                            "_": "1"
+                          }
+                        ],
+                        "Department": [
+                          {
+                            "_": "Revenue department"
+                          }
+                        ],
+                        "CityName": [
+                          {
+                            "_": "Big city"
+                          }
+                        ],
+                        "PostalZone": [
+                          {
+                            "_": "54321"
+                          }
+                        ],
+                        "CountrySubentityCode": [
+                          {
+                            "_": "RegionA"
+                          }
+                        ],
+                        "Country": [
+                          {
+                            "IdentificationCode": [
+                              {
+                                "_": "DK",
+                                "listID": "ISO3166-1",
+                                "listAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyTaxScheme": [
+                      {
+                        "CompanyID": [
+                          {
+                            "_": "DK12345",
+                            "schemeID": "DKVAT",
+                            "schemeAgencyID": "ZZZ"
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyLegalEntity": [
+                      {
+                        "RegistrationName": [
+                          {
+                            "_": "The Sellercompany Incorporated"
+                          }
+                        ],
+                        "CompanyID": [
+                          {
+                            "_": "5402697509",
+                            "schemeID": "CVR",
+                            "schemeAgencyID": "ZZZ"
+                          }
+                        ],
+                        "RegistrationAddress": [
+                          {
+                            "CityName": [
+                              {
+                                "_": "Big city"
+                              }
+                            ],
+                            "CountrySubentity": [
+                              {
+                                "_": "RegionA"
+                              }
+                            ],
+                            "Country": [
+                              {
+                                "IdentificationCode": [
+                                  {
+                                    "_": "DK"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "Contact": [
+                      {
+                        "Telephone": [
+                          {
+                            "_": "4621230"
+                          }
+                        ],
+                        "Telefax": [
+                          {
+                            "_": "4621231"
+                          }
+                        ],
+                        "ElectronicMail": [
+                          {
+                            "_": "antonio@salescompany.dk"
+                          }
+                        ]
+                      }
+                    ],
+                    "Person": [
+                      {
+                        "FirstName": [
+                          {
+                            "_": "Antonio"
+                          }
+                        ],
+                        "FamilyName": [
+                          {
+                            "_": "M"
+                          }
+                        ],
+                        "MiddleName": [
+                          {
+                            "_": "Salemacher"
+                          }
+                        ],
+                        "JobTitle": [
+                          {
+                            "_": "Sales manager"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "AccountingCustomerParty": [
+              {
+                "Party": [
+                  {
+                    "EndpointID": [
+                      {
+                        "_": "1234567987654",
+                        "schemeID": "GLN",
+                        "schemeAgencyID": "9"
+                      }
+                    ],
+                    "PartyIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "345KS5324",
+                            "schemeID": "ZZZ"
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyName": [
+                      {
+                        "Name": [
+                          {
+                            "_": "Buyercompany ltd"
+                          }
+                        ]
+                      }
+                    ],
+                    "PostalAddress": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1238764941386",
+                            "schemeID": "GLN",
+                            "schemeAgencyID": "9"
+                          }
+                        ],
+                        "Postbox": [
+                          {
+                            "_": "123"
+                          }
+                        ],
+                        "StreetName": [
+                          {
+                            "_": "Anystreet"
+                          }
+                        ],
+                        "AdditionalStreetName": [
+                          {
+                            "_": "Back door"
+                          }
+                        ],
+                        "BuildingNumber": [
+                          {
+                            "_": "8"
+                          }
+                        ],
+                        "Department": [
+                          {
+                            "_": "Accounting department"
+                          }
+                        ],
+                        "CityName": [
+                          {
+                            "_": "Anytown"
+                          }
+                        ],
+                        "PostalZone": [
+                          {
+                            "_": "101"
+                          }
+                        ],
+                        "CountrySubentity": [
+                          {
+                            "_": "RegionB"
+                          }
+                        ],
+                        "Country": [
+                          {
+                            "IdentificationCode": [
+                              {
+                                "_": "BE",
+                                "listID": "ISO3166-1",
+                                "listAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyTaxScheme": [
+                      {
+                        "CompanyID": [
+                          {
+                            "_": "BE54321",
+                            "schemeID": "BEVAT",
+                            "schemeAgencyID": "ZZZ"
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "PartyLegalEntity": [
+                      {
+                        "RegistrationName": [
+                          {
+                            "_": "The buyercompany inc."
+                          }
+                        ],
+                        "CompanyID": [
+                          {
+                            "_": "5645342123",
+                            "schemeAgencyID": "ZZZ",
+                            "schemeID": "ZZZ"
+                          }
+                        ],
+                        "RegistrationAddress": [
+                          {
+                            "CityName": [
+                              {
+                                "_": "Mainplace"
+                              }
+                            ],
+                            "CountrySubentity": [
+                              {
+                                "_": "RegionB"
+                              }
+                            ],
+                            "Country": [
+                              {
+                                "IdentificationCode": [
+                                  {
+                                    "_": "BE"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "Contact": [
+                      {
+                        "Telephone": [
+                          {
+                            "_": "5121230"
+                          }
+                        ],
+                        "Telefax": [
+                          {
+                            "_": "5121231"
+                          }
+                        ],
+                        "ElectronicMail": [
+                          {
+                            "_": "john@buyercompany.eu"
+                          }
+                        ]
+                      }
+                    ],
+                    "Person": [
+                      {
+                        "FirstName": [
+                          {
+                            "_": "John"
+                          }
+                        ],
+                        "FamilyName": [
+                          {
+                            "_": "X"
+                          }
+                        ],
+                        "MiddleName": [
+                          {
+                            "_": "Doe"
+                          }
+                        ],
+                        "JobTitle": [
+                          {
+                            "_": "Purchasing manager"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "PayeeParty": [
+              {
+                "PartyIdentification": [
+                  {
+                    "ID": [
+                      {
+                        "_": "098740918237",
+                        "schemeID": "GLN",
+                        "schemeAgencyID": "9"
+                      }
+                    ]
+                  }
+                ],
+                "PartyName": [
+                  {
+                    "Name": [
+                      {
+                        "_": "Ebeneser Scrooge Inc."
+                      }
+                    ]
+                  }
+                ],
+                "PartyLegalEntity": [
+                  {
+                    "CompanyID": [
+                      {
+                        "_": "6411982340",
+                        "schemeID": "UK:CH",
+                        "schemeAgencyID": "ZZZ"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "Delivery": [
+              {
+                "ActualDeliveryDate": [
+                  {
+                    "_": "2009-12-15"
+                  }
+                ],
+                "DeliveryLocation": [
+                  {
+                    "ID": [
+                      {
+                        "_": "6754238987648",
+                        "schemeID": "GLN",
+                        "schemeAgencyID": "9"
+                      }
+                    ],
+                    "Address": [
+                      {
+                        "StreetName": [
+                          {
+                            "_": "Deliverystreet"
+                          }
+                        ],
+                        "AdditionalStreetName": [
+                          {
+                            "_": "Side door"
+                          }
+                        ],
+                        "BuildingNumber": [
+                          {
+                            "_": "12"
+                          }
+                        ],
+                        "CityName": [
+                          {
+                            "_": "DeliveryCity"
+                          }
+                        ],
+                        "PostalZone": [
+                          {
+                            "_": "523427"
+                          }
+                        ],
+                        "CountrySubentity": [
+                          {
+                            "_": "RegionC"
+                          }
+                        ],
+                        "Country": [
+                          {
+                            "IdentificationCode": [
+                              {
+                                "_": "BE"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "PaymentMeans": [
+              {
+                "PaymentMeansCode": [
+                  {
+                    "_": "31",
+                    "listID": "UN/ECE 4461"
+                  }
+                ],
+                "PaymentDueDate": [
+                  {
+                    "_": "2009-12-31"
+                  }
+                ],
+                "PaymentChannelCode": [
+                  {
+                    "_": "IBAN"
+                  }
+                ],
+                "PaymentID": [
+                  {
+                    "_": "Payref1"
+                  }
+                ],
+                "PayeeFinancialAccount": [
+                  {
+                    "ID": [
+                      {
+                        "_": "DK1212341234123412"
+                      }
+                    ],
+                    "FinancialInstitutionBranch": [
+                      {
+                        "FinancialInstitution": [
+                          {
+                            "ID": [
+                              {
+                                "_": "DKDKABCD"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "PaymentTerms": [
+              {
+                "Note": [
+                  {
+                    "_": "Penalty percentage 10% from due date"
+                  }
+                ]
+              }
+            ],
+            "AllowanceCharge": [
+              {
+                "ChargeIndicator": [
+                  {
+                    "_": true
+                  }
+                ],
+                "AllowanceChargeReason": [
+                  {
+                    "_": "Packing cost"
+                  }
+                ],
+                "Amount": [
+                  {
+                    "_": 100,
+                    "currencyID": "EUR"
+                  }
+                ]
+              },
+              {
+                "ChargeIndicator": [
+                  {
+                    "_": false
+                  }
+                ],
+                "AllowanceChargeReason": [
+                  {
+                    "_": "Promotion discount"
+                  }
+                ],
+                "Amount": [
+                  {
+                    "_": 100,
+                    "currencyID": "EUR"
+                  }
+                ]
+              }
+            ],
+            "TaxTotal": [
+              {
+                "TaxAmount": [
+                  {
+                    "_": 292.20,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "TaxSubtotal": [
+                  {
+                    "TaxableAmount": [
+                      {
+                        "_": 1460.5,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "TaxAmount": [
+                      {
+                        "_": 292.1,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "TaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "S",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 20
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "TaxableAmount": [
+                      {
+                        "_": 1,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "TaxAmount": [
+                      {
+                        "_": 0.1,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "TaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "AA",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 10
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "TaxableAmount": [
+                      {
+                        "_": -25,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "TaxAmount": [
+                      {
+                        "_": 0,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "TaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "E",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 0
+                          }
+                        ],
+                        "TaxExemptionReasonCode": [
+                          {
+                            "_": "AAM",
+                            "listID": "CWA 15577",
+                            "listAgencyID": "ZZZ"
+                          }
+                        ],
+                        "TaxExemptionReason": [
+                          {
+                            "_": "Exempt New Means of Transport"
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "LegalMonetaryTotal": [
+              {
+                "LineExtensionAmount": [
+                  {
+                    "_": 1436.5,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "TaxExclusiveAmount": [
+                  {
+                    "_": 1436.5,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "TaxInclusiveAmount": [
+                  {
+                    "_": 1729,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "AllowanceTotalAmount": [
+                  {
+                    "_": 100,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "ChargeTotalAmount": [
+                  {
+                    "_": 100,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "PrepaidAmount": [
+                  {
+                    "_": 1000,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "PayableRoundingAmount": [
+                  {
+                    "_": 0.30,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "PayableAmount": [
+                  {
+                    "_": 729,
+                    "currencyID": "EUR"
+                  }
+                ]
+              }
+            ],
+            "InvoiceLine": [
+              {
+                "ID": [
+                  {
+                    "_": "1"
+                  }
+                ],
+                "Note": [
+                  {
+                    "_": "Scratch on box"
+                  }
+                ],
+                "InvoicedQuantity": [
+                  {
+                    "_": 1,
+                    "unitCode": "C62"
+                  }
+                ],
+                "LineExtensionAmount": [
+                  {
+                    "_": 1273,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "AccountingCost": [
+                  {
+                    "_": "BookingCode001"
+                  }
+                ],
+                "OrderLineReference": [
+                  {
+                    "LineID": [
+                      {
+                        "_": "1"
+                      }
+                    ]
+                  }
+                ],
+                "AllowanceCharge": [
+                  {
+                    "ChargeIndicator": [
+                      {
+                        "_": false
+                      }
+                    ],
+                    "AllowanceChargeReason": [
+                      {
+                        "_": "Damage"
+                      }
+                    ],
+                    "Amount": [
+                      {
+                        "_": 12,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  },
+                  {
+                    "ChargeIndicator": [
+                      {
+                        "_": true
+                      }
+                    ],
+                    "AllowanceChargeReason": [
+                      {
+                        "_": "Testing"
+                      }
+                    ],
+                    "Amount": [
+                      {
+                        "_": 10,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  }
+                ],
+                "TaxTotal": [
+                  {
+                    "TaxAmount": [
+                      {
+                        "_": 254.6,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  }
+                ],
+                "Item": [
+                  {
+                    "Description": [
+                      {
+                        "_": "Processor: Intel Core 2 Duo SU9400 LV (1.4GHz). RAM:\n\t\t\t\t3MB. Screen 1440x900",
+                        "languageID": "EN"
+                      }
+                    ],
+                    "Name": [
+                      {
+                        "_": "Labtop computer"
+                      }
+                    ],
+                    "SellersItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "JB007"
+                          }
+                        ]
+                      }
+                    ],
+                    "StandardItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1234567890124",
+                            "schemeID": "GTIN",
+                            "schemeAgencyID": "9"
+                          }
+                        ]
+                      }
+                    ],
+                    "CommodityClassification": [
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "12344321",
+                            "listAgencyID": "113",
+                            "listID": "UNSPSC"
+                          }
+                        ]
+                      },
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "65434568",
+                            "listAgencyID": "2",
+                            "listID": "CPV"
+                          }
+                        ]
+                      }
+                    ],
+                    "ClassifiedTaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "S",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 20
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "AdditionalItemProperty": [
+                      {
+                        "Name": [
+                          {
+                            "_": "Color"
+                          }
+                        ],
+                        "Value": [
+                          {
+                            "_": "black"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "Price": [
+                  {
+                    "PriceAmount": [
+                      {
+                        "_": 1273,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "BaseQuantity": [
+                      {
+                        "_": 1,
+                        "unitCode": "C62"
+                      }
+                    ],
+                    "AllowanceCharge": [
+                      {
+                        "ChargeIndicator": [
+                          {
+                            "_": false
+                          }
+                        ],
+                        "AllowanceChargeReason": [
+                          {
+                            "_": "Contract"
+                          }
+                        ],
+                        "MultiplierFactorNumeric": [
+                          {
+                            "_": 0.15
+                          }
+                        ],
+                        "Amount": [
+                          {
+                            "_": 225,
+                            "currencyID": "EUR"
+                          }
+                        ],
+                        "BaseAmount": [
+                          {
+                            "_": 1500,
+                            "currencyID": "EUR"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ID": [
+                  {
+                    "_": "2"
+                  }
+                ],
+                "Note": [
+                  {
+                    "_": "Cover is slightly damaged."
+                  }
+                ],
+                "InvoicedQuantity": [
+                  {
+                    "_": -1,
+                    "unitCode": "C62"
+                  }
+                ],
+                "LineExtensionAmount": [
+                  {
+                    "_": -3.96,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "OrderLineReference": [
+                  {
+                    "LineID": [
+                      {
+                        "_": "5"
+                      }
+                    ]
+                  }
+                ],
+                "TaxTotal": [
+                  {
+                    "TaxAmount": [
+                      {
+                        "_": -0.396,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  }
+                ],
+                "Item": [
+                  {
+                    "Name": [
+                      {
+                        "_": "Returned \"Advanced computing\" book"
+                      }
+                    ],
+                    "SellersItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "JB008"
+                          }
+                        ]
+                      }
+                    ],
+                    "StandardItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1234567890125",
+                            "schemeID": "GTIN",
+                            "schemeAgencyID": "9"
+                          }
+                        ]
+                      }
+                    ],
+                    "CommodityClassification": [
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "32344324",
+                            "listAgencyID": "113",
+                            "listID": "UNSPSC"
+                          }
+                        ]
+                      },
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "65434567",
+                            "listAgencyID": "2",
+                            "listID": "CPV"
+                          }
+                        ]
+                      }
+                    ],
+                    "ClassifiedTaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "AA",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 10
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "Price": [
+                  {
+                    "PriceAmount": [
+                      {
+                        "_": 3.96,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "BaseQuantity": [
+                      {
+                        "_": 1,
+                        "unitCode": "C62"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ID": [
+                  {
+                    "_": "3"
+                  }
+                ],
+                "InvoicedQuantity": [
+                  {
+                    "_": 2,
+                    "unitCode": "C62"
+                  }
+                ],
+                "LineExtensionAmount": [
+                  {
+                    "_": 4.96,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "OrderLineReference": [
+                  {
+                    "LineID": [
+                      {
+                        "_": "3"
+                      }
+                    ]
+                  }
+                ],
+                "TaxTotal": [
+                  {
+                    "TaxAmount": [
+                      {
+                        "_": 0.496,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  }
+                ],
+                "Item": [
+                  {
+                    "Name": [
+                      {
+                        "_": "\"Computing for dummies\" book"
+                      }
+                    ],
+                    "SellersItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "JB009"
+                          }
+                        ]
+                      }
+                    ],
+                    "StandardItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1234567890126",
+                            "schemeID": "GTIN",
+                            "schemeAgencyID": "9"
+                          }
+                        ]
+                      }
+                    ],
+                    "CommodityClassification": [
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "32344324",
+                            "listAgencyID": "113",
+                            "listID": "UNSPSC"
+                          }
+                        ]
+                      },
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "65434566",
+                            "listAgencyID": "2",
+                            "listID": "CPV"
+                          }
+                        ]
+                      }
+                    ],
+                    "ClassifiedTaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "AA",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 10
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "Price": [
+                  {
+                    "PriceAmount": [
+                      {
+                        "_": 2.48,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "BaseQuantity": [
+                      {
+                        "_": 1,
+                        "unitCode": "C62"
+                      }
+                    ],
+                    "AllowanceCharge": [
+                      {
+                        "ChargeIndicator": [
+                          {
+                            "_": false
+                          }
+                        ],
+                        "AllowanceChargeReason": [
+                          {
+                            "_": "Contract"
+                          }
+                        ],
+                        "MultiplierFactorNumeric": [
+                          {
+                            "_": 0.1
+                          }
+                        ],
+                        "Amount": [
+                          {
+                            "_": 0.275,
+                            "currencyID": "EUR"
+                          }
+                        ],
+                        "BaseAmount": [
+                          {
+                            "_": 2.75,
+                            "currencyID": "EUR"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ID": [
+                  {
+                    "_": "4"
+                  }
+                ],
+                "InvoicedQuantity": [
+                  {
+                    "_": -1,
+                    "unitCode": "C62"
+                  }
+                ],
+                "LineExtensionAmount": [
+                  {
+                    "_": -25,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "OrderLineReference": [
+                  {
+                    "LineID": [
+                      {
+                        "_": "2"
+                      }
+                    ]
+                  }
+                ],
+                "TaxTotal": [
+                  {
+                    "TaxAmount": [
+                      {
+                        "_": 0,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  }
+                ],
+                "Item": [
+                  {
+                    "Name": [
+                      {
+                        "_": "Returned IBM 5150 desktop"
+                      }
+                    ],
+                    "SellersItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "JB010"
+                          }
+                        ]
+                      }
+                    ],
+                    "StandardItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1234567890127",
+                            "schemeID": "GTIN",
+                            "schemeAgencyID": "9"
+                          }
+                        ]
+                      }
+                    ],
+                    "CommodityClassification": [
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "12344322",
+                            "listAgencyID": "113",
+                            "listID": "UNSPSC"
+                          }
+                        ]
+                      },
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "65434565",
+                            "listAgencyID": "2",
+                            "listID": "CPV"
+                          }
+                        ]
+                      }
+                    ],
+                    "ClassifiedTaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "E",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 0
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "Price": [
+                  {
+                    "PriceAmount": [
+                      {
+                        "_": 25,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "BaseQuantity": [
+                      {
+                        "_": 1,
+                        "unitCode": "C62"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ID": [
+                  {
+                    "_": "5"
+                  }
+                ],
+                "InvoicedQuantity": [
+                  {
+                    "_": 250,
+                    "unitCode": "C62"
+                  }
+                ],
+                "LineExtensionAmount": [
+                  {
+                    "_": 187.5,
+                    "currencyID": "EUR"
+                  }
+                ],
+                "AccountingCost": [
+                  {
+                    "_": "BookingCode002"
+                  }
+                ],
+                "OrderLineReference": [
+                  {
+                    "LineID": [
+                      {
+                        "_": "4"
+                      }
+                    ]
+                  }
+                ],
+                "TaxTotal": [
+                  {
+                    "TaxAmount": [
+                      {
+                        "_": 37.5,
+                        "currencyID": "EUR"
+                      }
+                    ]
+                  }
+                ],
+                "Item": [
+                  {
+                    "Name": [
+                      {
+                        "_": "Network cable"
+                      }
+                    ],
+                    "SellersItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "JB011"
+                          }
+                        ]
+                      }
+                    ],
+                    "StandardItemIdentification": [
+                      {
+                        "ID": [
+                          {
+                            "_": "1234567890128",
+                            "schemeID": "GTIN",
+                            "schemeAgencyID": "9"
+                          }
+                        ]
+                      }
+                    ],
+                    "CommodityClassification": [
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "12344325",
+                            "listAgencyID": "113",
+                            "listID": "UNSPSC"
+                          }
+                        ]
+                      },
+                      {
+                        "ItemClassificationCode": [
+                          {
+                            "_": "65434564",
+                            "listAgencyID": "2",
+                            "listID": "CPV"
+                          }
+                        ]
+                      }
+                    ],
+                    "ClassifiedTaxCategory": [
+                      {
+                        "ID": [
+                          {
+                            "_": "S",
+                            "schemeID": "UN/ECE 5305",
+                            "schemeAgencyID": "6"
+                          }
+                        ],
+                        "Percent": [
+                          {
+                            "_": 20
+                          }
+                        ],
+                        "TaxScheme": [
+                          {
+                            "ID": [
+                              {
+                                "_": "VAT",
+                                "schemeID": "UN/ECE 5153",
+                                "schemeAgencyID": "6"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "AdditionalItemProperty": [
+                      {
+                        "Name": [
+                          {
+                            "_": "Type"
+                          }
+                        ],
+                        "Value": [
+                          {
+                            "_": "Cat5"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "Price": [
+                  {
+                    "PriceAmount": [
+                      {
+                        "_": 0.75,
+                        "currencyID": "EUR"
+                      }
+                    ],
+                    "BaseQuantity": [
+                      {
+                        "_": 1,
+                        "unitCode": "C62"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "XML": {
+      "summary": "An Invoice in XML format",
+      "value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Invoice xmlns=\"urn:oasis:names:specification:ubl:schema:xsd:Invoice-2\"\n\txmlns:cac=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\"\n\txmlns:cbc=\"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2\">\n\t<cbc:UBLVersionID>2.1</cbc:UBLVersionID>\n\t<cbc:ID>TOSL108</cbc:ID>\n\t<cbc:IssueDate>2009-12-15</cbc:IssueDate>\n\t<cbc:InvoiceTypeCode listID=\"UN/ECE 1001 Subset\" listAgencyID=\"6\">380</cbc:InvoiceTypeCode>\n\t<cbc:Note languageID=\"en\">Ordered in our booth at the convention.</cbc:Note>\n\t<cbc:TaxPointDate>2009-11-30</cbc:TaxPointDate>\n\t<cbc:DocumentCurrencyCode listID=\"ISO 4217 Alpha\" listAgencyID=\"6\"\n\t\t>EUR</cbc:DocumentCurrencyCode>\n\t<cbc:AccountingCost>Project cost code 123</cbc:AccountingCost>\n\t<cac:InvoicePeriod>\n\t\t<cbc:StartDate>2009-11-01</cbc:StartDate>\n\t\t<cbc:EndDate>2009-11-30</cbc:EndDate>\n\t</cac:InvoicePeriod>\n\t<cac:OrderReference>\n\t\t<cbc:ID>123</cbc:ID>\n\t</cac:OrderReference>\n\t<cac:ContractDocumentReference>\n\t\t<cbc:ID>Contract321</cbc:ID>\n\t\t<cbc:DocumentType>Framework agreement</cbc:DocumentType>\n\t</cac:ContractDocumentReference>\n\t<cac:AdditionalDocumentReference>\n\t\t<cbc:ID>Doc1</cbc:ID>\n\t\t<cbc:DocumentType>Timesheet</cbc:DocumentType>\n\t\t<cac:Attachment>\n\t\t\t<cac:ExternalReference>\n\t\t\t\t<cbc:URI>http://www.suppliersite.eu/sheet001.html</cbc:URI>\n\t\t\t</cac:ExternalReference>\n\t\t</cac:Attachment>\n\t</cac:AdditionalDocumentReference>\n\t<cac:AdditionalDocumentReference>\n\t\t<cbc:ID>Doc2</cbc:ID>\n\t\t<cbc:DocumentType>Drawing</cbc:DocumentType>\n\t\t<cac:Attachment>\n\t\t\t<cbc:EmbeddedDocumentBinaryObject mimeCode=\"application/pdf\"\n\t\t\t\t>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>\n\t\t</cac:Attachment>\n\t</cac:AdditionalDocumentReference>\n\t<cac:AccountingSupplierParty>\n\t\t<cac:Party>\n\t\t\t<cbc:EndpointID schemeID=\"GLN\" schemeAgencyID=\"9\">1234567890123</cbc:EndpointID>\n\t\t\t<cac:PartyIdentification>\n\t\t\t\t<cbc:ID schemeID=\"ZZZ\">Supp123</cbc:ID>\n\t\t\t</cac:PartyIdentification>\n\t\t\t<cac:PartyName>\n\t\t\t\t<cbc:Name>Salescompany ltd.</cbc:Name>\n\t\t\t</cac:PartyName>\n\t\t\t<cac:PostalAddress>\n\t\t\t\t<cbc:ID schemeID=\"GLN\" schemeAgencyID=\"9\">1231412341324</cbc:ID>\n\t\t\t\t<cbc:Postbox>5467</cbc:Postbox>\n\t\t\t\t<cbc:StreetName>Main street</cbc:StreetName>\n\t\t\t\t<cbc:AdditionalStreetName>Suite 123</cbc:AdditionalStreetName>\n\t\t\t\t<cbc:BuildingNumber>1</cbc:BuildingNumber>\n\t\t\t\t<cbc:Department>Revenue department</cbc:Department>\n\t\t\t\t<cbc:CityName>Big city</cbc:CityName>\n\t\t\t\t<cbc:PostalZone>54321</cbc:PostalZone>\n\t\t\t\t<cbc:CountrySubentityCode>RegionA</cbc:CountrySubentityCode>\n\t\t\t\t<cac:Country>\n\t\t\t\t\t<cbc:IdentificationCode listID=\"ISO3166-1\" listAgencyID=\"6\"\n\t\t\t\t\t\t>DK</cbc:IdentificationCode>\n\t\t\t\t</cac:Country>\n\t\t\t</cac:PostalAddress>\n\t\t\t<cac:PartyTaxScheme>\n\t\t\t\t<cbc:CompanyID schemeID=\"DKVAT\" schemeAgencyID=\"ZZZ\">DK12345</cbc:CompanyID>\n\t\t\t\t<cac:TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</cac:TaxScheme>\n\t\t\t</cac:PartyTaxScheme>\n\t\t\t<cac:PartyLegalEntity>\n\t\t\t\t<cbc:RegistrationName>The Sellercompany Incorporated</cbc:RegistrationName>\n\t\t\t\t<cbc:CompanyID schemeID=\"CVR\" schemeAgencyID=\"ZZZ\">5402697509</cbc:CompanyID>\n\t\t\t\t<cac:RegistrationAddress>\n\t\t\t\t\t<cbc:CityName>Big city</cbc:CityName>\n\t\t\t\t\t<cbc:CountrySubentity>RegionA</cbc:CountrySubentity>\n\t\t\t\t\t<cac:Country>\n\t\t\t\t\t\t<cbc:IdentificationCode>DK</cbc:IdentificationCode>\n\t\t\t\t\t</cac:Country>\n\t\t\t\t</cac:RegistrationAddress>\n\t\t\t</cac:PartyLegalEntity>\n\t\t\t<cac:Contact>\n\t\t\t\t<cbc:Telephone>4621230</cbc:Telephone>\n\t\t\t\t<cbc:Telefax>4621231</cbc:Telefax>\n\t\t\t\t<cbc:ElectronicMail>antonio@salescompany.dk</cbc:ElectronicMail>\n\t\t\t</cac:Contact>\n\t\t\t<cac:Person>\n\t\t\t\t<cbc:FirstName>Antonio</cbc:FirstName>\n\t\t\t\t<cbc:FamilyName>M</cbc:FamilyName>\n\t\t\t\t<cbc:MiddleName>Salemacher</cbc:MiddleName>\n\t\t\t\t<cbc:JobTitle>Sales manager</cbc:JobTitle>\n\t\t\t</cac:Person>\n\t\t</cac:Party>\n\t</cac:AccountingSupplierParty>\n\t<cac:AccountingCustomerParty>\n\t\t<cac:Party>\n\t\t\t<cbc:EndpointID schemeID=\"GLN\" schemeAgencyID=\"9\">1234567987654</cbc:EndpointID>\n\t\t\t<cac:PartyIdentification>\n\t\t\t\t<cbc:ID schemeID=\"ZZZ\">345KS5324</cbc:ID>\n\t\t\t</cac:PartyIdentification>\n\t\t\t<cac:PartyName>\n\t\t\t\t<cbc:Name>Buyercompany ltd</cbc:Name>\n\t\t\t</cac:PartyName>\n\t\t\t<cac:PostalAddress>\n\t\t\t\t<cbc:ID schemeID=\"GLN\" schemeAgencyID=\"9\">1238764941386</cbc:ID>\n\t\t\t\t<cbc:Postbox>123</cbc:Postbox>\n\t\t\t\t<cbc:StreetName>Anystreet</cbc:StreetName>\n\t\t\t\t<cbc:AdditionalStreetName>Back door</cbc:AdditionalStreetName>\n\t\t\t\t<cbc:BuildingNumber>8</cbc:BuildingNumber>\n\t\t\t\t<cbc:Department>Accounting department</cbc:Department>\n\t\t\t\t<cbc:CityName>Anytown</cbc:CityName>\n\t\t\t\t<cbc:PostalZone>101</cbc:PostalZone>\n\t\t\t\t<cbc:CountrySubentity>RegionB</cbc:CountrySubentity>\n\t\t\t\t<cac:Country>\n\t\t\t\t\t<cbc:IdentificationCode listID=\"ISO3166-1\" listAgencyID=\"6\"\n\t\t\t\t\t\t>BE</cbc:IdentificationCode>\n\t\t\t\t</cac:Country>\n\t\t\t</cac:PostalAddress>\n\t\t\t<cac:PartyTaxScheme>\n\t\t\t\t<cbc:CompanyID schemeID=\"BEVAT\" schemeAgencyID=\"ZZZ\">BE54321</cbc:CompanyID>\n\t\t\t\t<cac:TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</cac:TaxScheme>\n\t\t\t</cac:PartyTaxScheme>\n\t\t\t<cac:PartyLegalEntity>\n\t\t\t\t<cbc:RegistrationName>The buyercompany inc.</cbc:RegistrationName>\n\t\t\t\t<cbc:CompanyID schemeAgencyID=\"ZZZ\" schemeID=\"ZZZ\">5645342123</cbc:CompanyID>\n\t\t\t\t<cac:RegistrationAddress>\n\t\t\t\t\t<cbc:CityName>Mainplace</cbc:CityName>\n\t\t\t\t\t<cbc:CountrySubentity>RegionB</cbc:CountrySubentity>\n\t\t\t\t\t<cac:Country>\n\t\t\t\t\t\t<cbc:IdentificationCode>BE</cbc:IdentificationCode>\n\t\t\t\t\t</cac:Country>\n\t\t\t\t</cac:RegistrationAddress>\n\t\t\t</cac:PartyLegalEntity>\n\t\t\t<cac:Contact>\n\t\t\t\t<cbc:Telephone>5121230</cbc:Telephone>\n\t\t\t\t<cbc:Telefax>5121231</cbc:Telefax>\n\t\t\t\t<cbc:ElectronicMail>john@buyercompany.eu</cbc:ElectronicMail>\n\t\t\t</cac:Contact>\n\t\t\t<cac:Person>\n\t\t\t\t<cbc:FirstName>John</cbc:FirstName>\n\t\t\t\t<cbc:FamilyName>X</cbc:FamilyName>\n\t\t\t\t<cbc:MiddleName>Doe</cbc:MiddleName>\n\t\t\t\t<cbc:JobTitle>Purchasing manager</cbc:JobTitle>\n\t\t\t</cac:Person>\n\t\t</cac:Party>\n\t</cac:AccountingCustomerParty>\n\t<cac:PayeeParty>\n\t\t<cac:PartyIdentification>\n\t\t\t<cbc:ID schemeID=\"GLN\" schemeAgencyID=\"9\">098740918237</cbc:ID>\n\t\t</cac:PartyIdentification>\n\t\t<cac:PartyName>\n\t\t\t<cbc:Name>Ebeneser Scrooge Inc.</cbc:Name>\n\t\t</cac:PartyName>\n\t\t<cac:PartyLegalEntity>\n\t\t\t<cbc:CompanyID schemeID=\"UK:CH\" schemeAgencyID=\"ZZZ\">6411982340</cbc:CompanyID>\n\t\t</cac:PartyLegalEntity>\n\t</cac:PayeeParty>\n\t<cac:Delivery>\n\t\t<cbc:ActualDeliveryDate>2009-12-15</cbc:ActualDeliveryDate>\n\t\t<cac:DeliveryLocation>\n\t\t\t<cbc:ID schemeID=\"GLN\" schemeAgencyID=\"9\">6754238987648</cbc:ID>\n\t\t\t<cac:Address>\n\t\t\t\t<cbc:StreetName>Deliverystreet</cbc:StreetName>\n\t\t\t\t<cbc:AdditionalStreetName>Side door</cbc:AdditionalStreetName>\n\t\t\t\t<cbc:BuildingNumber>12</cbc:BuildingNumber>\n\t\t\t\t<cbc:CityName>DeliveryCity</cbc:CityName>\n\t\t\t\t<cbc:PostalZone>523427</cbc:PostalZone>\n\t\t\t\t<cbc:CountrySubentity>RegionC</cbc:CountrySubentity>\n\t\t\t\t<cac:Country>\n\t\t\t\t\t<cbc:IdentificationCode>BE</cbc:IdentificationCode>\n\t\t\t\t</cac:Country>\n\t\t\t</cac:Address>\n\t\t</cac:DeliveryLocation>\n\t</cac:Delivery>\n\t<cac:PaymentMeans>\n\t\t<cbc:PaymentMeansCode listID=\"UN/ECE 4461\"\n\t\t\t>31</cbc:PaymentMeansCode>\n\t\t<cbc:PaymentDueDate>2009-12-31</cbc:PaymentDueDate>\n\t\t<cbc:PaymentChannelCode>IBAN</cbc:PaymentChannelCode>\n\t\t<cbc:PaymentID>Payref1</cbc:PaymentID>\n\t\t<cac:PayeeFinancialAccount>\n\t\t\t<cbc:ID>DK1212341234123412</cbc:ID>\n\t\t\t<cac:FinancialInstitutionBranch>\n\t\t\t\t<cac:FinancialInstitution>\n\t\t\t\t\t<cbc:ID>DKDKABCD</cbc:ID>\n\t\t\t\t</cac:FinancialInstitution>\n\t\t\t</cac:FinancialInstitutionBranch>\n\t\t</cac:PayeeFinancialAccount>\n\t</cac:PaymentMeans>\n\t<cac:PaymentTerms>\n\t\t<cbc:Note>Penalty percentage 10% from due date</cbc:Note>\n\t</cac:PaymentTerms>\n\t<cac:AllowanceCharge>\n\t\t<cbc:ChargeIndicator>true</cbc:ChargeIndicator>\n\t\t<cbc:AllowanceChargeReason>Packing cost</cbc:AllowanceChargeReason>\n\t\t<cbc:Amount currencyID=\"EUR\">100</cbc:Amount>\n\t</cac:AllowanceCharge>\n\t<cac:AllowanceCharge>\n\t\t<cbc:ChargeIndicator>false</cbc:ChargeIndicator>\n\t\t<cbc:AllowanceChargeReason>Promotion discount</cbc:AllowanceChargeReason>\n\t\t<cbc:Amount currencyID=\"EUR\">100</cbc:Amount>\n\t</cac:AllowanceCharge>\n\t<cac:TaxTotal>\n\t\t<cbc:TaxAmount currencyID=\"EUR\">292.20</cbc:TaxAmount>\n\t\t<cac:TaxSubtotal>\n\t\t\t<cbc:TaxableAmount currencyID=\"EUR\">1460.5</cbc:TaxableAmount>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">292.1</cbc:TaxAmount>\n\t\t\t<cac:TaxCategory>\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">S</cbc:ID>\n\t\t\t\t<cbc:Percent>20</cbc:Percent>\n\t\t\t\t<cac:TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</cac:TaxScheme>\n\t\t\t</cac:TaxCategory>\n\t\t</cac:TaxSubtotal>\n\t\t<cac:TaxSubtotal>\n\t\t\t<cbc:TaxableAmount currencyID=\"EUR\">1</cbc:TaxableAmount>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">0.1</cbc:TaxAmount>\n\t\t\t<cac:TaxCategory>\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">AA</cbc:ID>\n\t\t\t\t<cbc:Percent>10</cbc:Percent>\n\t\t\t\t<cac:TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</cac:TaxScheme>\n\t\t\t</cac:TaxCategory>\n\t\t</cac:TaxSubtotal>\n\t\t<cac:TaxSubtotal>\n\t\t\t<cbc:TaxableAmount currencyID=\"EUR\">-25</cbc:TaxableAmount>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">0</cbc:TaxAmount>\n\t\t\t<cac:TaxCategory>\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">E</cbc:ID>\n\t\t\t\t<cbc:Percent>0</cbc:Percent>\n\t\t\t\t<cbc:TaxExemptionReasonCode listID=\"CWA 15577\" listAgencyID=\"ZZZ\"\n\t\t\t\t\t>AAM</cbc:TaxExemptionReasonCode>\n\t\t\t\t<cbc:TaxExemptionReason>Exempt New Means of Transport</cbc:TaxExemptionReason>\n\t\t\t\t<cac:TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</cac:TaxScheme>\n\t\t\t</cac:TaxCategory>\n\t\t</cac:TaxSubtotal>\n\t</cac:TaxTotal>\n\t<cac:LegalMonetaryTotal>\n\t\t<cbc:LineExtensionAmount currencyID=\"EUR\">1436.5</cbc:LineExtensionAmount>\n\t\t<cbc:TaxExclusiveAmount currencyID=\"EUR\">1436.5</cbc:TaxExclusiveAmount>\n\t\t<cbc:TaxInclusiveAmount currencyID=\"EUR\">1729</cbc:TaxInclusiveAmount>\n\t\t<cbc:AllowanceTotalAmount currencyID=\"EUR\">100</cbc:AllowanceTotalAmount>\n\t\t<cbc:ChargeTotalAmount currencyID=\"EUR\">100</cbc:ChargeTotalAmount>\n\t\t<cbc:PrepaidAmount currencyID=\"EUR\">1000</cbc:PrepaidAmount>\n\t\t<cbc:PayableRoundingAmount currencyID=\"EUR\">0.30</cbc:PayableRoundingAmount>\n\t\t<cbc:PayableAmount currencyID=\"EUR\">729</cbc:PayableAmount>\n\t</cac:LegalMonetaryTotal>\n\t<cac:InvoiceLine>\n\t\t<cbc:ID>1</cbc:ID>\n\t\t<cbc:Note>Scratch on box</cbc:Note>\n\t\t<cbc:InvoicedQuantity unitCode=\"C62\">1</cbc:InvoicedQuantity>\n\t\t<cbc:LineExtensionAmount currencyID=\"EUR\">1273</cbc:LineExtensionAmount>\n\t\t<cbc:AccountingCost>BookingCode001</cbc:AccountingCost>\n\t\t<cac:OrderLineReference>\n\t\t\t<cbc:LineID>1</cbc:LineID>\n\t\t</cac:OrderLineReference>\n\t\t<cac:AllowanceCharge>\n\t\t\t<cbc:ChargeIndicator>false</cbc:ChargeIndicator>\n\t\t\t<cbc:AllowanceChargeReason>Damage</cbc:AllowanceChargeReason>\n\t\t\t<cbc:Amount currencyID=\"EUR\">12</cbc:Amount>\n\t\t</cac:AllowanceCharge>\n\t\t<cac:AllowanceCharge>\n\t\t\t<cbc:ChargeIndicator>true</cbc:ChargeIndicator>\n\t\t\t<cbc:AllowanceChargeReason>Testing</cbc:AllowanceChargeReason>\n\t\t\t<cbc:Amount currencyID=\"EUR\">10</cbc:Amount>\n\t\t</cac:AllowanceCharge>\n\t\t<cac:TaxTotal>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">254.6</cbc:TaxAmount>\n\t\t</cac:TaxTotal>\n\t\t<cac:Item>\n\t\t\t<cbc:Description languageID=\"EN\">Processor: Intel Core 2 Duo SU9400 LV (1.4GHz). RAM:\n\t\t\t\t3MB. Screen 1440x900</cbc:Description>\n\t\t\t<cbc:Name>Labtop computer</cbc:Name>\n\t\t\t<cac:SellersItemIdentification>\n\t\t\t\t<cbc:ID>JB007</cbc:ID>\n\t\t\t</cac:SellersItemIdentification>\n\t\t\t<cac:StandardItemIdentification>\n\t\t\t\t<cbc:ID schemeID=\"GTIN\" schemeAgencyID=\"9\">1234567890124</cbc:ID>\n\t\t\t</cac:StandardItemIdentification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"113\" listID=\"UNSPSC\"\n\t\t\t\t\t>12344321</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"2\" listID=\"CPV\"\n\t\t\t\t\t>65434568</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<ClassifiedTaxCategory\n\t\t\t\txmlns=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\">\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">S</cbc:ID>\n\t\t\t\t<cbc:Percent>20</cbc:Percent>\n\t\t\t\t<TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</TaxScheme>\n\t\t\t</ClassifiedTaxCategory>\n\t\t\t<cac:AdditionalItemProperty>\n\t\t\t\t<cbc:Name>Color</cbc:Name>\n\t\t\t\t<cbc:Value>black</cbc:Value>\n\t\t\t</cac:AdditionalItemProperty>\n\t\t</cac:Item>\n\t\t<cac:Price>\n\t\t\t<cbc:PriceAmount currencyID=\"EUR\">1273</cbc:PriceAmount>\n\t\t\t<cbc:BaseQuantity unitCode=\"C62\">1</cbc:BaseQuantity>\n\t\t\t<cac:AllowanceCharge>\n\t\t\t\t<cbc:ChargeIndicator>false</cbc:ChargeIndicator>\n\t\t\t\t<cbc:AllowanceChargeReason>Contract</cbc:AllowanceChargeReason>\n\t\t\t\t<cbc:MultiplierFactorNumeric>0.15</cbc:MultiplierFactorNumeric>\n\t\t\t\t<cbc:Amount currencyID=\"EUR\">225</cbc:Amount>\n\t\t\t\t<cbc:BaseAmount currencyID=\"EUR\">1500</cbc:BaseAmount>\n\t\t\t</cac:AllowanceCharge>\n\t\t</cac:Price>\n\t</cac:InvoiceLine>\n\t<cac:InvoiceLine>\n\t\t<cbc:ID>2</cbc:ID>\n\t\t<cbc:Note>Cover is slightly damaged.</cbc:Note>\n\t\t<cbc:InvoicedQuantity unitCode=\"C62\">-1</cbc:InvoicedQuantity>\n\t\t<cbc:LineExtensionAmount currencyID=\"EUR\">-3.96</cbc:LineExtensionAmount>\n\t\t<cac:OrderLineReference>\n\t\t\t<cbc:LineID>5</cbc:LineID>\n\t\t</cac:OrderLineReference>\n\t\t<cac:TaxTotal>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">-0.396</cbc:TaxAmount>\n\t\t</cac:TaxTotal>\n\t\t<cac:Item>\n\t\t\t<cbc:Name>Returned \"Advanced computing\" book</cbc:Name>\n\t\t\t<cac:SellersItemIdentification>\n\t\t\t\t<cbc:ID>JB008</cbc:ID>\n\t\t\t</cac:SellersItemIdentification>\n\t\t\t<cac:StandardItemIdentification>\n\t\t\t\t<cbc:ID schemeID=\"GTIN\" schemeAgencyID=\"9\">1234567890125</cbc:ID>\n\t\t\t</cac:StandardItemIdentification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"113\" listID=\"UNSPSC\"\n\t\t\t\t\t>32344324</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"2\" listID=\"CPV\"\n\t\t\t\t\t>65434567</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<ClassifiedTaxCategory\n\t\t\t\txmlns=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\">\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">AA</cbc:ID>\n\t\t\t\t<cbc:Percent>10</cbc:Percent>\n\t\t\t\t<TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</TaxScheme>\n\t\t\t</ClassifiedTaxCategory>\n\t\t</cac:Item>\n\t\t<cac:Price>\n\t\t\t<cbc:PriceAmount currencyID=\"EUR\">3.96</cbc:PriceAmount>\n\t\t\t<cbc:BaseQuantity unitCode=\"C62\">1</cbc:BaseQuantity>\n\t\t</cac:Price>\n\t</cac:InvoiceLine>\n\t<cac:InvoiceLine>\n\t\t<cbc:ID>3</cbc:ID>\n\t\t<cbc:InvoicedQuantity unitCode=\"C62\">2</cbc:InvoicedQuantity>\n\t\t<cbc:LineExtensionAmount currencyID=\"EUR\">4.96</cbc:LineExtensionAmount>\n\t\t<cac:OrderLineReference>\n\t\t\t<cbc:LineID>3</cbc:LineID>\n\t\t</cac:OrderLineReference>\n\t\t<cac:TaxTotal>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">0.496</cbc:TaxAmount>\n\t\t</cac:TaxTotal>\n\t\t<cac:Item>\n\t\t\t<cbc:Name>\"Computing for dummies\" book</cbc:Name>\n\t\t\t<cac:SellersItemIdentification>\n\t\t\t\t<cbc:ID>JB009</cbc:ID>\n\t\t\t</cac:SellersItemIdentification>\n\t\t\t<cac:StandardItemIdentification>\n\t\t\t\t<cbc:ID schemeID=\"GTIN\" schemeAgencyID=\"9\">1234567890126</cbc:ID>\n\t\t\t</cac:StandardItemIdentification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"113\" listID=\"UNSPSC\"\n\t\t\t\t\t>32344324</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"2\" listID=\"CPV\"\n\t\t\t\t\t>65434566</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<ClassifiedTaxCategory\n\t\t\t\txmlns=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\">\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">AA</cbc:ID>\n\t\t\t\t<cbc:Percent>10</cbc:Percent>\n\t\t\t\t<TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</TaxScheme>\n\t\t\t</ClassifiedTaxCategory>\n\t\t</cac:Item>\n\t\t<cac:Price>\n\t\t\t<cbc:PriceAmount currencyID=\"EUR\">2.48</cbc:PriceAmount>\n\t\t\t<cbc:BaseQuantity unitCode=\"C62\">1</cbc:BaseQuantity>\n\t\t\t<cac:AllowanceCharge>\n\t\t\t\t<cbc:ChargeIndicator>false</cbc:ChargeIndicator>\n\t\t\t\t<cbc:AllowanceChargeReason>Contract</cbc:AllowanceChargeReason>\n\t\t\t\t<cbc:MultiplierFactorNumeric>0.1</cbc:MultiplierFactorNumeric>\n\t\t\t\t<cbc:Amount currencyID=\"EUR\">0.275</cbc:Amount>\n\t\t\t\t<cbc:BaseAmount currencyID=\"EUR\">2.75</cbc:BaseAmount>\n\t\t\t</cac:AllowanceCharge>\n\t\t</cac:Price>\n\t</cac:InvoiceLine>\n\t<cac:InvoiceLine>\n\t\t<cbc:ID>4</cbc:ID>\n\t\t<cbc:InvoicedQuantity unitCode=\"C62\">-1</cbc:InvoicedQuantity>\n\t\t<cbc:LineExtensionAmount currencyID=\"EUR\">-25</cbc:LineExtensionAmount>\n\t\t<cac:OrderLineReference>\n\t\t\t<cbc:LineID>2</cbc:LineID>\n\t\t</cac:OrderLineReference>\n\t\t<cac:TaxTotal>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">0</cbc:TaxAmount>\n\t\t</cac:TaxTotal>\n\t\t<cac:Item>\n\t\t\t<cbc:Name>Returned IBM 5150 desktop</cbc:Name>\n\t\t\t<cac:SellersItemIdentification>\n\t\t\t\t<cbc:ID>JB010</cbc:ID>\n\t\t\t</cac:SellersItemIdentification>\n\t\t\t<cac:StandardItemIdentification>\n\t\t\t\t<cbc:ID schemeID=\"GTIN\" schemeAgencyID=\"9\">1234567890127</cbc:ID>\n\t\t\t</cac:StandardItemIdentification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"113\" listID=\"UNSPSC\"\n\t\t\t\t\t>12344322</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"2\" listID=\"CPV\"\n\t\t\t\t\t>65434565</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<ClassifiedTaxCategory\n\t\t\t\txmlns=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\">\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">E</cbc:ID>\n\t\t\t\t<cbc:Percent>0</cbc:Percent>\n\t\t\t\t<TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</TaxScheme>\n\t\t\t</ClassifiedTaxCategory>\n\t\t</cac:Item>\n\t\t<cac:Price>\n\t\t\t<cbc:PriceAmount currencyID=\"EUR\">25</cbc:PriceAmount>\n\t\t\t<cbc:BaseQuantity unitCode=\"C62\">1</cbc:BaseQuantity>\n\t\t</cac:Price>\n\t</cac:InvoiceLine>\n\t<cac:InvoiceLine>\n\t\t<cbc:ID>5</cbc:ID>\n\t\t<cbc:InvoicedQuantity unitCode=\"C62\">250</cbc:InvoicedQuantity>\n\t\t<cbc:LineExtensionAmount currencyID=\"EUR\">187.5</cbc:LineExtensionAmount>\n\t\t<cbc:AccountingCost>BookingCode002</cbc:AccountingCost>\n\t\t<cac:OrderLineReference>\n\t\t\t<cbc:LineID>4</cbc:LineID>\n\t\t</cac:OrderLineReference>\n\t\t<cac:TaxTotal>\n\t\t\t<cbc:TaxAmount currencyID=\"EUR\">37.5</cbc:TaxAmount>\n\t\t</cac:TaxTotal>\n\t\t<cac:Item>\n\t\t\t<cbc:Name>Network cable</cbc:Name>\n\t\t\t<cac:SellersItemIdentification>\n\t\t\t\t<cbc:ID>JB011</cbc:ID>\n\t\t\t</cac:SellersItemIdentification>\n\t\t\t<cac:StandardItemIdentification>\n\t\t\t\t<cbc:ID schemeID=\"GTIN\" schemeAgencyID=\"9\">1234567890128</cbc:ID>\n\t\t\t</cac:StandardItemIdentification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"113\" listID=\"UNSPSC\"\n\t\t\t\t\t>12344325</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<cac:CommodityClassification>\n\t\t\t\t<cbc:ItemClassificationCode listAgencyID=\"2\" listID=\"CPV\"\n\t\t\t\t\t>65434564</cbc:ItemClassificationCode>\n\t\t\t</cac:CommodityClassification>\n\t\t\t<ClassifiedTaxCategory\n\t\t\t\txmlns=\"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2\">\n\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5305\" schemeAgencyID=\"6\">S</cbc:ID>\n\t\t\t\t<cbc:Percent>20</cbc:Percent>\n\t\t\t\t<TaxScheme>\n\t\t\t\t\t<cbc:ID schemeID=\"UN/ECE 5153\" schemeAgencyID=\"6\">VAT</cbc:ID>\n\t\t\t\t</TaxScheme>\n\t\t\t</ClassifiedTaxCategory>\n\t\t\t<cac:AdditionalItemProperty>\n\t\t\t\t<cbc:Name>Type</cbc:Name>\n\t\t\t\t<cbc:Value>Cat5</cbc:Value>\n\t\t\t</cac:AdditionalItemProperty>\n\t\t</cac:Item>\n\t\t<cac:Price>\n\t\t\t<cbc:PriceAmount currencyID=\"EUR\">0.75</cbc:PriceAmount>\n\t\t\t<cbc:BaseQuantity unitCode=\"C62\">1</cbc:BaseQuantity>\n\t\t</cac:Price>\n\t</cac:InvoiceLine>\n</Invoice>\n"
+    }
+  }
+}

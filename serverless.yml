@@ -1,0 +1,162 @@
+service: qvalia-serverless-public-api
+
+package:
+  individually: true
+
+plugins:
+  - serverless-offline-ssm
+  - serverless-offline
+  - serverless-prune-plugin
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: local
+  region: eu-west-1
+  memorySize: 512
+  timeout: 120
+  lambdaHashingVersion: 20201221
+
+  # Serverless: Deprecation warning: Starting with version 3.0.0, following property will be replaced:
+  #          "provider.iamRoleStatements" -> "provider.iam.role.statements"
+  #          More Info: https://www.serverless.com/framework/docs/deprecations/#PROVIDER_IAM_SETTINGS
+  # Serverless: Deprecation warning: Resolution of lambda version hashes was improved with better algorithm, which will be used in next major release.
+  #          Switch to it now by setting "provider.lambdaHashingVersion" to "20201221"
+  #          More Info: https://www.serverless.com/framework/docs/deprecations/#LAMBDA_HASHING_VERSION_V2
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - 'lambda:InvokeFunction'
+            - 'lambda:InvokeAsync'
+            - 'logs:CreateLogGroup'
+            - 'logs:CreateLogStream'
+            - 'logs:PutLogEvents'
+            - 'ec2:CreateNetworkInterface'
+            - 'ec2:DescribeNetworkInterfaces'
+            - 'ec2:DeleteNetworkInterface'
+            - 'ssm:*'
+            - 'sqs:*'
+            - 'alb:*'
+            - 'dynamodb:GetItem'
+            - 'dynamodb:PutItem'
+            - 'dynamodb:UpdateItem'
+            - 'rds-data:ExecuteStatement'
+            - 'rds-data:BeginTransaction'
+            - 'rds-data:CommitTransaction'
+            - 'rds-data:RollbackTransaction'
+            - 'secretsmanager:*'
+            - 's3:GetObject'
+            - 's3:PutObject'
+            - 's3:DeleteObject'
+          Resource: '*'
+
+  vpc:
+    securityGroupIds:
+      - ${ssm:/${opt:stage, self:provider.stage}/lambda/common/VPC_SECURITY_GROUP_ID}
+    subnetIds:
+      - ${ssm:/${opt:stage, self:provider.stage}/lambda/common/VPC_SUBNET_ID1}
+      - ${ssm:/${opt:stage, self:provider.stage}/lambda/common/VPC_SUBNET_ID2}
+
+  environment:
+    LAMBDA_STAGE: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/LAMBDA_STAGE}
+    SENTRY_DSN: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/SENTRY_DSN}
+    LOGGLY_TOKEN: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/LOGGLY_TOKEN}
+    RDS_AURORA_DATA_API_SECRET_ARN: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/RDS_AURORA_DATA_API_SECRET_ARN}
+    RDS_AURORA_DATA_API_ARN: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/RDS_AURORA_DATA_API_ARN}
+    RDS_AURORA_DATA_API_MDS_DB: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/RDS_AURORA_DATA_API_MDS_DB}
+    S3_EINVOICE_ZIP: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/S3_EINVOICE_ZIP}
+    S3_EINVOICE_ATTACHMENT: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/S3_EINVOICE_ATTACHMENT}
+    SQS_PUT_PUBLICAPI_QUEUE_NAME: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/SQS_PUT_PUBLICAPI_QUEUE_NAME}
+    PG_HOST: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/PG_HOST}
+    PG_USER: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/PG_USER}
+    PG_PASSWORD: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/PG_PASSWORD}
+    PG_DATABASE: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/PG_MDS_DATABASE}
+    PG_PORT: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/PG_PORT}
+
+  logs:
+    httpApi: true
+
+  httpApi:
+    # cors:
+    #   origin: '*'
+    #   allowCredentials: true
+    authorizers:
+      customAuthorizer:
+        type: request
+        functionName: customAuthorizer
+        enableSimpleResponses: true
+        identitySource:
+          - $request.header.authorization
+        caching:
+            enabled: false
+
+functions:
+  routes:
+    handler: src/handler.run
+    description: Routing event to correct internal function
+    timeout: 28 # Timeout just before API GW to avoid success Lambda but time-out from GW
+    events:
+      - httpApi:
+          method: '*'
+          path: '/transaction/{proxy+}'
+          authorizer:
+            name: customAuthorizer
+
+  customAuthorizer:
+    handler: src/auth/handler.auth
+
+  docs:
+    handler: src/docs/htmlHandler.run
+    description: Api documentation html
+    timeout: 28 # Timeout just before API GW to avoid success Lambda but time-out from GW
+    events:
+      - httpApi:
+          method: 'GET'
+          path: '/docs'
+
+  migrator:
+    handler: src/migrator/handler.run
+    description: invoke migrations on database
+
+  create-access-key:
+    handler: src/create-access-key/handler.run
+    description: create an access-key to use for testing the api.
+
+  store-incoming-data:
+    handler: src/store-incoming-data/handler.run
+    description: redeive message in PA-JSON format on queue containting received data. Store this in mdsdb.
+    events:
+      - sqs: ${ssm:/${opt:stage, self:provider.stage}/lambda/common/SQS_STORE_MDS_ARN}
+
+
+custom:
+  prune:
+    automatic: true
+    number: 10
+  serverless-offline:
+    httpPort: 3001
+  serverless-offline-ssm:
+    stages:
+      - local
+    ssm:
+      '/local/lambda/common/LAMBDA_STAGE': '${opt:stage, self:provider.stage}'
+      '/local/lambda/common/SENTRY_DSN': 'https://xxx:yyy@sentry.io/160000'
+      '/local/lambda/common/LOGGLY_TOKEN': 'http://loggly.com.fake/'
+      '/local/lambda/common/VPC_SECURITY_GROUP_ID': 'sg-99c7c2e0'
+      '/local/lambda/common/VPC_SUBNET_ID1': 'subnet-2ac5fd72'
+      '/local/lambda/common/VPC_SUBNET_ID2': 'subnet-40728e27'
+      '/local/lambda/common/RDS_AURORA_DATA_API_SECRET_ARN': 'arn:aws:secretsmanager:eu-west-1:290634095615:secret:dummy'
+      '/local/lambda/common/RDS_AURORA_DATA_API_ARN': 'arn:aws:rds:eu-west-1:290634095615:cluster:dummy'
+      '/local/lambda/common/RDS_AURORA_DATA_API_MDS_DB': 'mdsdb'
+      '/local/lambda/common/S3_EINVOICE_ATTACHMENT': 'qvalia.qip.local.store.attachment'
+      '/local/lambda/common/S3_EINVOICE_ZIP': 'qvalia.filestore.local.einvoice-zip'
+      '/local/lambda/common/SQS_PUT_PUBLICAPI_QUEUE_NAME': 'http://localhost:4566/000000000000/lambda-local-receiveinvoice'
+      '/local/lambda/common/SQS_STORE_MDS_ARN': 'arn:aws:sqs:region:000000000000:lambda-local-store-mds'
+      '/local/lambda/common/PG_HOST': 0.0.0.0
+      '/local/lambda/common/PG_USER': postgres
+      '/local/lambda/common/PG_PASSWORD': secretpassword
+      '/local/lambda/common/PG_MDS_DATABASE': mdsdb
+      '/local/lambda/common/PG_PORT': 5432

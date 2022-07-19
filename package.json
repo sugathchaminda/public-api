@@ -1,0 +1,75 @@
+{
+  "name": "qvalia-serverless-public-api",
+  "version": "1.0.0",
+  "description": "Serverless project for Public API endpoints.",
+  "main": "handler.js",
+  "scripts": {
+    "lint": "eslint ./",
+    "lint-fix": "eslint --fix ./",
+    "start": "NODE_ENV=development ./node_modules/.bin/serverless offline start -r eu-west-1 --noTimeout --stage local --ignoreJWTSignature",
+    "debug": "NODE_ENV=development export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline start -r eu-west-1 --noTimeout --noAuth --stage local",
+    "migrate": "PG_HOST=0.0.0.0 PG_USER=postgres PG_PASSWORD=secretpassword PG_DATABASE=mdsdb PG_PORT=5432 NODE_ENV=development knex migrate:latest",
+    "test": "NODE_ENV=test NO_PRECOMPILED_SCHEMAS=true jest -c jest.config.unit.js",
+    "integration": "PG_HOST=0.0.0.0 PG_USER=postgres PG_PASSWORD=secretpassword PG_DATABASE=mdsdb PG_PORT=5432 NODE_ENV=test LOCALSTACK_ENDPOINT=http://localhost:4566 jest -c jest.config.integration.js",
+    "ci-integration": "RUN_SLS_OFFLINE_IN_INTEGRATION_TEST=true NODE_ENV=test jest -c jest.config.integration.js --bail --ci",
+    "ci-test": "NODE_ENV=test NO_PRECOMPILED_SCHEMAS=true jest -c jest.config.unit.js --bail --ci",
+    "compileschemas": "node compile-json-schemas.js",
+    "create-local-access-key": "node create-local-access-key.js",
+    "lint-docs": "npx openapi lint ./src/docs/schemas/openapi.yaml",
+    "bundle-docs": "npx openapi bundle -o ./dist/openapi.yaml && npx redoc-cli bundle ./dist/openapi.yaml && mv ./redoc-static.html ./dist/redoc-static.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qvalia/qvalia-serverless-public-api.git"
+  },
+  "engines": {
+    "node": ">=12.22.1"
+  },
+  "author": "Qvalia",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Qvalia/qvalia-serverless-public-api/issues"
+  },
+  "homepage": "https://github.com/Qvalia/qvalia-serverless-public-api#readme",
+  "devDependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.62",
+    "danger": "^10.6.6",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.2.0",
+    "prettier": "^2.4.0",
+    "redoc-cli": "^0.12.3",
+    "serverless": "^2.58.0",
+    "serverless-offline": "^7.0.0",
+    "serverless-offline-aws-ssm-local": "^1.1.3",
+    "serverless-offline-ssm": "^5.2.0",
+    "serverless-prune-plugin": "^1.5.0",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "ajv": "^8.6.3",
+    "ajv-formats": "^2.1.1",
+    "aws-sdk": "^2.992.0",
+    "axios": "^0.23.0",
+    "data-api-client": "^1.2.0",
+    "dotenv": "^10.0.0",
+    "got": "^11.8.2",
+    "joi": "^17.4.2",
+    "knex": "^0.95.11",
+    "lambda-api": "^0.11.1",
+    "lodash": "^4.17.21",
+    "lodash.clonedeep": "^4.5.0",
+    "luxon": "^2.0.2",
+    "mime-types": "^2.1.32",
+    "pg": "^8.7.1",
+    "raven": "^2.6.4",
+    "require-from-string": "^2.0.2",
+    "uuid": "^8.3.2",
+    "xml2js": "0.4.23"
+  }
+}

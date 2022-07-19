@@ -1,0 +1,28 @@
+{
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "regNo",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "party",
+      "AttributeType": "S"
+    }
+  ],
+  "TableName": "qip-local-public-api-auth-keys",
+  "KeySchema": [
+    {
+      "AttributeName": "regNo",
+      "KeyType": "HASH"
+    },
+    {
+      "AttributeName": "party",
+      "KeyType": "RANGE"
+    }
+  ],
+  "BillingMode": "PROVISIONED",
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}

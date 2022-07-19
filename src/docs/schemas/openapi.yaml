@@ -1,0 +1,487 @@
+openapi: 3.0.3
+servers:
+  - url: http://localhost:3001
+    description: used for testing locally
+info:
+  title: "Qvalia Api"
+  description: Api interface towards invoicing and order functions
+  version: "0.9"
+paths:
+  /transaction/{registrationNumber}/invoices/outgoing:
+    post:
+      operationId: "PostOutgoingInvoice"
+      summary: "Send invoice"
+      description: Send outgoing invoice on Peppol network
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InvoiceJson'
+            examples:
+              TrivialJson:
+                $ref: 'examples.json/#/InvoiceExamples/TrivialJson'
+              FullJson:
+                $ref: 'examples.json/#/InvoiceExamples/FullJson'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/InvoiceXML'
+            examples:
+              Xml:
+                $ref: 'examples.json/#/InvoiceExamples/XML'
+      responses:
+        "200":
+          description: Success invoice was sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoiceSuccess'
+            application/xml:
+                schema:
+                  properties:
+                    success:
+                      $ref: '#/components/schemas/PostInvoiceSuccess'
+                example: "<success>\n\t<message>invoice 123 sent</message>\n\t<invoice_id>123</invoice_id>\n</success>"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+        "409":
+          description: Conflict error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+      parameters:
+        - name: "registrationNumber"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+          style: "simple"
+        - name: "overwrite"
+          in: "query"
+          required: false
+          schema:
+            type: "boolean"
+          style: "simple"
+  /transaction/{registrationNumber}/invoices/outgoing/batch:
+    post:
+      operationId: "BatchOutgoingInvoices"
+      summary: "Send invoices in bulk"
+      description: Sends list of outgoing invoice on Peppol network if all invoices are valid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                Invoices:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/InvoiceJson'
+            examples:
+              TrivialJson:
+                $ref: 'examples.json/#/InvoiceExamples/TrivialJsonArray'
+
+      responses:
+        "200":
+          description: Success invoice was sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchInvoicesSuccess'
+            application/xml:
+              schema:
+                properties:
+                  success:
+                    $ref: '#/components/schemas/BatchInvoicesSuccess'
+              example: "<success>\n\t<message>invoices 123, 456 sent</message>\n\t<invoice_ids>\n\t\t<invoice_id>123</invoice_id>\n\t\t<invoice_id>456</invoice_id>\n\t</invoice_ids>\n</success>"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "409":
+          description: Conflict error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - name: "registrationNumber"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+          style: "simple"
+        - name: "overwrite"
+          in: "query"
+          required: false
+          schema:
+            type: "boolean"
+          style: "simple"
+  '/transaction/{registrationNumber}/invoices/incoming':
+    get:
+      operationId: GetncomingInvoice
+      summary: Get incoming invoice
+      description: Get incoming invoice
+      responses:
+        '200':
+          description: Success invoices
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetInvoiceSuccess'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - name: includeRead
+          in: query
+          required: false
+          schema:
+            type: boolean
+          style: simple
+        - name: registrationNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          style: simple
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+          style: simple
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+          style: simple
+  '/transaction/{registrationNumber}/invoices/incoming/readInvoices':
+    get:
+      operationId: ReadIncomingInvoice
+      summary: Read incoming invoice
+      description: Read incoming invoice, marks invoices that are returned as read.
+      responses:
+        '200':
+          description: Success invoices
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadInvoiceSuccess'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - name: registrationNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          style: simple
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+          style: simple
+    post:
+      operationId: "PostIncomingInvoice"
+      summary: "Send invoice"
+      description: Send incoming invoice on Peppol network
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InvoiceJson'
+            examples:
+              TrivialJson:
+                $ref: 'examples.json/#/InvoiceExamples/TrivialJson'
+              FullJson:
+                $ref: 'examples.json/#/InvoiceExamples/FullJson'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/InvoiceXML'
+            examples:
+              Xml:
+                $ref: 'examples.json/#/InvoiceExamples/XML'
+      responses:
+        "200":
+          description: Success invoice was sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoiceSuccess'
+            application/xml:
+                schema:
+                  properties:
+                    success:
+                      $ref: '#/components/schemas/PostInvoiceSuccess'
+                example: "<success>\n\t<message>invoice 123 sent</message>\n\t<invoice_id>123</invoice_id>\n</success>"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+        "409":
+          description: Conflict error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/xml:
+              schema:
+                properties:
+                  error:
+                    $ref: '#/components/schemas/Error'
+              examples:
+                Xml:
+                  $ref: 'examples.json/#/ErrorExamples/AbstractXML'
+      parameters:
+        - name: "registrationNumber"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+          style: "simple"
+        - name: "overwrite"
+          in: "query"
+          required: false
+          schema:
+            type: "boolean"
+          style: "simple"        
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+        - status
+        - type
+      properties:
+        status:
+          type: string
+          nullable: false
+        type:
+          type: string
+          nullable: false
+        data:
+          type: string
+          nullable: true
+        metadata:
+          type: object
+          nullable: true
+
+    BatchInvoicesSuccess:
+      type: object
+      required:
+        - message
+        - invoice_ids
+      properties:
+        message:
+          type: string
+          nullable: false
+          example: invoice 123, 456 sent
+        invoice_ids:
+          type: array
+          nullable: false
+          example:
+            - 123
+            - 456
+      additionalProperties: false
+    PostInvoiceSuccess:
+      type: "object"
+      required:
+        - message
+        - invoice_id
+      properties:
+        message:
+          type: string
+          nullable: false
+          readOnly: true
+          example: invoice 123 sent
+        invoice_id:
+          type: string
+          nullable: false
+          readOnly: true
+          example: 123
+      additionalProperties: false
+    GetInvoiceSuccess:
+      type: "object"
+      required:
+        - status
+        - data
+      properties:
+        status:
+          type: string
+          nullable: false
+          readOnly: true
+          example: "success"
+        data:
+          type: array
+          nullable: false
+          readOnly: true
+          example:
+            $ref: 'examples.json/#/InvoiceExamples/TrivialJsonArray/value'
+      additionalProperties: false
+    ReadInvoiceSuccess:
+      type: "object"
+      required:
+        - status
+        - data
+      properties:
+        status:
+          type: string
+          nullable: false
+          readOnly: true
+          example: "success"
+        data:
+          type: array
+          nullable: false
+          readOnly: true
+          example:
+            $ref: 'examples.json/#/InvoiceExamples/TrivialJsonArray/value'
+      additionalProperties: false
+    InvoiceJson:
+      properties:
+        Invoice:
+          title: Invoice
+          description: "For the full schema specification BIS 3.0 see: [https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/tree/](https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/tree/)\n\n
+          For Json specific representation of the UBL schema see: [https://docs.oasis-open.org/ubl/UBL-2.1-JSON/v2.0/cnd01/UBL-2.1-JSON-v2.0-cnd01.html](https://docs.oasis-open.org/ubl/UBL-2.1-JSON/v2.0/cnd01/UBL-2.1-JSON-v2.0-cnd01.html)\n\n
+          Invoice can also be represented as JSON created from running valid xml trough xml2js convertion as per the package xml2js see: [https://www.npmjs.com/package/xml2js](https://www.npmjs.com/package/xml2js)"
+      additionalProperties: true
+    InvoiceXML:
+      properties:
+        Invoice:
+          title: Invoice
+          description: "For the full schema specification see: [https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/tree/](https://docs.peppol.eu/poacc/billing/3.0/syntax/ubl-invoice/tree/)"

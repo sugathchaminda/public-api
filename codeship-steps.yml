@@ -1,0 +1,28 @@
+- type: parallel
+  name: tests
+  steps:
+  - name: lint
+    service: test
+    command: npm run lint
+  - name: lint-docs
+    service: test
+    command: npm run lint-docs
+  - name: unit-test
+    service: test
+    command: npm run ci-test
+  - name: integration-test
+    service: integration
+    command: bash ./wait-for-it.sh localstack:4566 -t 120 -- npm run ci-integration
+- type: serial
+  name: deploy-test
+  tag: test
+  steps:
+  - name: bundle-redoc
+    service: deploy
+    command: npm run bundle-docs
+  - name: deploy-to-aws
+    service: deploy
+    command: ./node_modules/.bin/serverless deploy --stage test
+  - name: migrate
+    service: deploy
+    command: ./node_modules/.bin/serverless invoke -f migrator --stage test

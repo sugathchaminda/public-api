@@ -1,0 +1,371 @@
+<Invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+         xmlns:cec="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+         xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0</cbc:CustomizationID>
+  <cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+  <cbc:ID>95434</cbc:ID>
+  <cbc:IssueDate>2021-10-29</cbc:IssueDate>
+  <cbc:DueDate>2021-11-28</cbc:DueDate>
+  <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+  <cbc:Note>Efter förfallodagen debiteras referensränta med diskonto +8% / OBS. Uppge fakturanummer som
+    betalningsreferens ! Betala gärna till vårt bankgiro.
+  </cbc:Note>
+  <cbc:TaxPointDate>2021-10-29</cbc:TaxPointDate>
+  <cbc:DocumentCurrencyCode>SEK</cbc:DocumentCurrencyCode>
+  <cbc:BuyerReference>940107</cbc:BuyerReference>
+  <cac:DespatchDocumentReference>
+    <cbc:ID>84141</cbc:ID>
+  </cac:DespatchDocumentReference>
+  <cac:AdditionalDocumentReference>
+    <cbc:ID>84141</cbc:ID>
+    <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
+  </cac:AdditionalDocumentReference>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="0007">5566301825</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID>5566301825</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>Sport och Fritidsgrossisten AB</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>Kyrkogatan 33</cbc:StreetName>
+        <cbc:CityName>Virserum</cbc:CityName>
+        <cbc:PostalZone>57772</cbc:PostalZone>
+        <cac:Country>
+          <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>SE556630182501</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>Godkänd för F-skatt</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>TAX</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Sport och Fritidsgrossisten AB</cbc:RegistrationName>
+        <cbc:CompanyID schemeID="0007">5566301825</cbc:CompanyID>
+        <cbc:CompanyLegalForm>Säte Virserum SE</cbc:CompanyLegalForm>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>Anders Johansson</cbc:Name>
+        <cbc:Telephone>049530550</cbc:Telephone>
+        <cbc:ElectronicMail>info@sport-fritid.nu</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="0088">7340019803005</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID>2120001215</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>Halmstads kommun -utbildnings&amp;arbetsmarknadsförval</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>c/o Coor, A94</cbc:StreetName>
+        <cbc:CityName>Luleå</cbc:CityName>
+        <cbc:PostalZone>97174</cbc:PostalZone>
+        <cac:AddressLine>
+          <cbc:Line>Ref:</cbc:Line>
+        </cac:AddressLine>
+        <cac:Country>
+          <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>SE212000121501</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Halmstads kommun -utbildnings&amp;arbetsmarknadsförval</cbc:RegistrationName>
+        <cbc:CompanyID schemeID="0007">2120001215</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>Jonas Åberg</cbc:Name>
+        <cbc:Telephone>0703620853</cbc:Telephone>
+        <cbc:ElectronicMail>jonas.aberg@halmstad.se</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:Delivery>
+    <cbc:ActualDeliveryDate>2021-10-29</cbc:ActualDeliveryDate>
+    <cac:DeliveryLocation>
+      <cbc:ID>7340019853246</cbc:ID>
+      <cac:Address>
+        <cbc:StreetName>Gym</cbc:StreetName>
+        <cbc:CityName>Halmstad</cbc:CityName>
+        <cbc:PostalZone>30236</cbc:PostalZone>
+        <cac:AddressLine>
+          <cbc:Line>Sturegymnasiet
+            Engelbrektsgatan 36
+          </cbc:Line>
+        </cac:AddressLine>
+        <cac:Country>
+          <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:Address>
+    </cac:DeliveryLocation>
+  </cac:Delivery>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>54462825</cbc:ID>
+      <cac:FinancialInstitutionBranch>
+        <cbc:ID>SE:BANKGIRO</cbc:ID>
+      </cac:FinancialInstitutionBranch>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>SE6580000840533338651866</cbc:ID>
+      <cac:FinancialInstitutionBranch>
+        <cbc:ID>SWEDSESS</cbc:ID>
+      </cac:FinancialInstitutionBranch>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>840533338651866</cbc:ID>
+      <cac:FinancialInstitutionBranch>
+        <cbc:ID>SWEDSESS</cbc:ID>
+      </cac:FinancialInstitutionBranch>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentTerms>
+    <cbc:Note>30 dagar netto</cbc:Note>
+  </cac:PaymentTerms>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="SEK">2485.50</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="SEK">9942.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="SEK">2485.50</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="SEK">9942.00</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="SEK">9942.00</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="SEK">12427.50</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="SEK">12427.50</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:Note>Färg silver / svart
+      Delivery reference: 84141
+      Delivery date: 2021-11-15
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">0</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">0.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Ställ f. Kettlebell, 2 plan</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>793231</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">2396.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:Note>Ställb höjd100-143cm
+      Delivery reference: 84141
+      Delivery date: 2021-10-28
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">1</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">1950.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Presstativ Master Classic Maxi</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>790161</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">1950.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>3</cbc:ID>
+    <cbc:Note>Delivery reference: 84141
+      Delivery date: 2021-10-15
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">1</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">7992.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Lyftplattform Master</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>790955</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">7992.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>4</cbc:ID>
+    <cbc:Note>Delivery reference: 84141
+      Delivery date: 2021-11-02
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">0</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">0.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Bumpervikt gummi, 10 kg</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>790256</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">620.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>5</cbc:ID>
+    <cbc:Note>vikttol. +2% till (-)4%
+      Delivery reference: 84141
+      Delivery date: 2021-11-02
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">0</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">0.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Kettlebell hantel 6 kg</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>793058</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">123.75</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>6</cbc:ID>
+    <cbc:Note>Färg: röd, Latexband
+      Delivery reference: 84141
+      Delivery date: 2021-11-03
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">0</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">0.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Träningsband rulle 25 m, lätt</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>780170</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">352.50</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>7</cbc:ID>
+    <cbc:Note>Längd 200 cm./ 13 mm. röd
+      Delivery reference: 84141
+      Delivery date: 2021-11-03
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">0</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">0.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Träningsband Powerband 7-15 kg</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>780185</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">63.75</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>8</cbc:ID>
+    <cbc:Note>Innehåll enl. nedan
+      Delivery reference: 84141
+      Delivery date: 2021-11-03
+    </cbc:Note>
+    <cbc:InvoicedQuantity unitCode="EA">0</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="SEK">0.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>Exertube 120cm,medium Storp6st</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>780130</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>25.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="SEK">465.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

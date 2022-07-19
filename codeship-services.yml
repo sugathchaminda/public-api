@@ -1,0 +1,68 @@
+deploy:
+  build:
+    image: qvalia-serverless-public-api
+    dockerfile: Dockerfile
+  encrypted_env_file:
+    - aws.env.encrypted
+  volumes:
+    - ./dist:/usr/app/dist
+test:
+  build:
+    image: qvalia-serverless-public-api
+    dockerfile: Dockerfile
+integration:
+  build:
+    image: qvalia-serverless-public-api
+    dockerfile: Dockerfile
+  depends_on:
+    - localstack
+    - local-data-api
+    - db
+  encrypted_env_file:
+    - aws.env.encrypted
+  environment:
+    - PG_HOST=db
+    - PG_USER=postgres
+    - PG_PASSWORD=secretpassword
+    - PG_DATABASE=mdsdb
+    - PG_PORT=5432
+    - SERVERLESS_OFFLINE_URL=http://localhost:3001
+    - LOCALSTACK_ENDPOINT=http://localstack:4566
+    - AURORA_LOCAL_ENDPOINT=http://local-data-api
+    - LOCAL_SQS_PUT_PUBLICAPI_QUEUE_NAME=http://localstack:4566/000000000000/lambda-local-receiveinvoice
+  expose:
+    - "3001"
+localstack:
+  image: localstack/localstack:0.13.0
+  expose:
+    - "4566"
+  environment:
+    - SERVICES=sqs,s3,dynamodb
+    - DEBUG=${DEBUG- }
+    - DOCKER_HOST=unix:///var/run/docker.sock
+    - HOST_TMP_FOLDER=${TMPDIR:-/tmp/}localstack
+  volumes:
+    - "${TMPDIR:-/tmp}/localstack:/tmp/localstack"
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    - ./aws:/docker-entrypoint-initaws.d
+local-data-api:
+  image: koxudaxi/local-data-api
+  restart: always
+  environment:
+    ENGINE: PostgreSQLJDBC
+    POSTGRES_HOST: db
+    POSTGRES_PORT: 5432
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: secretpassword
+    RESOURCE_ARN: "arn:aws:rds:eu-west-1:290634095615:cluster:dummy"
+    SECRET_ARN: "arn:aws:secretsmanager:eu-west-1:290634095615:secret:dummy"
+  expose:
+    - "80"
+db:
+  image: postgres:10.7-alpine
+  restart: always
+  environment:
+    POSTGRES_PASSWORD: secretpassword
+    POSTGRES_DB: mdsdb
+  expose:
+    - "5432"

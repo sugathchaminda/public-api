@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "max-len": ["error", { "code": 160 }],
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-console": "off"
+  }
+}

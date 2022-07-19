@@ -1,0 +1,2625 @@
+{
+  "title": "json-schema/common/UBL-CommonBasicComponents-2.1",
+  "description": "\n  Library:           OASIS Universal Business Language (UBL) 2.1\n                     http://docs.oasis-open.org/ubl/UBL-2.1-JSON/v2.0//\n  Release Date:      10 April 2020\n  Module:            json-schema/common/UBL-CommonBasicComponents-2.1\n  Generated on:      2020-04-13 17:59z\n  Copyright (c) OASIS Open 2020. All Rights Reserved.\n\n\n  OASIS takes no position regarding the validity or scope of any \n  intellectual property or other rights that might be claimed to pertain \n  to the implementation or use of the technology described in this \n  document or the extent to which any license under such rights \n  might or might not be available; neither does it represent that it has \n  made any effort to identify any such rights. Information on OASIS's \n  procedures with respect to rights in OASIS specifications can be \n  found at the OASIS website. Copies of claims of rights made \n  available for publication and any assurances of licenses to be made \n  available, or the result of an attempt made to obtain a general \n  license or permission for the use of such proprietary rights by \n  implementors or users of this specification, can be obtained from \n  the OASIS Executive Director.\n\n  OASIS invites any interested party to bring to its attention any \n  copyrights, patents or patent applications, or other proprietary \n  rights which may cover technology that may be required to \n  implement this specification. Please address the information to the \n  OASIS Executive Director.\n  \n  This document and translations of it may be copied and furnished to \n  others, and derivative works that comment on or otherwise explain \n  it or assist in its implementation may be prepared, copied, \n  published and distributed, in whole or in part, without restriction of \n  any kind, provided that the above copyright notice and this \n  paragraph are included on all such copies and derivative works. \n  However, this document itself may not be modified in any way, \n  such as by removing the copyright notice or references to OASIS, \n  except as needed for the purpose of developing OASIS \n  specifications, in which case the procedures for copyrights defined \n  in the OASIS Intellectual Property Rights document must be \n  followed, or as required to translate it into languages other than \n  English. \n\n  The limited permissions granted above are perpetual and will not be \n  revoked by OASIS or its successors or assigns. \n\n  This document and the information contained herein is provided on \n  an \"AS IS\" basis and OASIS DISCLAIMS ALL WARRANTIES, \n  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY \n  WARRANTY THAT THE USE OF THE INFORMATION HEREIN \n  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED \n  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A \n  PARTICULAR PURPOSE.    \n",
+  "definitions": {
+    "AcceptedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "AcceptedVariantsDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AccountFormatCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AccountID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AccountTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AccountingCost": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AccountingCostCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ActionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ActivityType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ActivityTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ActualDeliveryDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ActualDeliveryTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ActualDespatchDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ActualDespatchTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ActualPickupDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ActualPickupTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ActualTemperatureReductionQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "AdValoremIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "AdditionalAccountID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AdditionalConditions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AdditionalInformation": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AdditionalStreetName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "AddressFormatCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AddressTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AdjustmentReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AdmissionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AdvertisementAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "AgencyID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AgencyName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AirFlowPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "AircraftID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AliasName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "AllowanceChargeReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AllowanceChargeReasonCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/AllowanceChargeReason_CodeType"
+      },
+    "AllowanceTotalAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "AltitudeMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "Amount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "AmountRate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/RateType"
+      },
+    "AnimalFoodApprovedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "AnimalFoodIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "AnnualAverageAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "ApplicationStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ApprovalDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ApprovalStatus": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AttributeID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AuctionConstraintIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "AuctionURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AvailabilityDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "AvailabilityStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AverageAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "AverageSubsequentContractAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "AwardDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "AwardTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "AwardingCriterionDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "AwardingCriterionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "AwardingCriterionTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "AwardingMethodTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "BackOrderAllowedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "BackorderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "BackorderReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "BalanceAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "BalanceBroughtForwardIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "BarcodeSymbologyID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "BaseAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "BaseQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "BaseUnitMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "BasedOnConsensusIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "BasicConsumedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "BatchQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "BestBeforeDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "BindingOnBuyerIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "BirthDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "BirthplaceName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "BlockName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "BrandName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "BrokerAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "BudgetYearNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "BuildingName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "BuildingNumber": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "BulkCargoIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "BusinessClassificationEvidenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "BusinessIdentityEvidenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "BuyerEventID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "BuyerProfileURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "BuyerReference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CV2ID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "CalculationExpression": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CalculationExpressionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CalculationMethodCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CalculationRate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/RateType"
+      },
+    "CalculationSequenceNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "CallBaseAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "CallDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "CallExtensionAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "CallTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "CancellationNote": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CandidateReductionConstraintIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "CandidateStatement": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CanonicalizationMethod": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CapabilityTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CardChipCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Chip_CodeType"
+      },
+    "CardTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CargoTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CarrierAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "CarrierServiceInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CatalogueIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "CategoryName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "CertificateType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CertificateTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ChangeConditions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Channel": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ChannelCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Channel_CodeType"
+      },
+    "CharacterSetCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Characteristics": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ChargeIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ChargeTotalAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "ChargeableQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ChargeableWeightMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "ChildConsignmentQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ChipApplicationID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "CityName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "CitySubdivisionName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "CodeValue": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CollaborationPriorityCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Comment": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CommodityCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CompanyID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "CompanyLegalForm": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CompanyLegalFormCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CompanyLiquidationStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ComparedValueMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "ComparisonDataCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ComparisonDataSourceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ComparisonForecastIssueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ComparisonForecastIssueTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "CompletionIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "Condition": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ConditionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Conditions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ConditionsDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ConsigneeAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ConsignmentQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ConsignorAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ConsolidatableIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ConstitutionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ConsumerIncentiveTacticTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ConsumerUnitQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ConsumersEnergyLevel": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ConsumersEnergyLevelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ConsumptionEnergyQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ConsumptionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ConsumptionLevel": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ConsumptionLevelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ConsumptionReportID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ConsumptionType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ConsumptionTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ConsumptionWaterQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ContainerizedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "Content": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ContentUnitQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ContractFolderID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ContractName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ContractSubdivision": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ContractType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ContractTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ContractedCarrierAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ContractingSystemCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CoordinateSystemCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CopyIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "CorporateRegistrationTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CorporateStockAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "CorrectionAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "CorrectionType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CorrectionTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CorrectionUnitAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "CountrySubentity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CountrySubentityCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CreditLineAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "CreditNoteTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CreditedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "CrewQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "CurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "CurrentChargeType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CurrentChargeTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CustomerAssignedAccountID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "CustomerReference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CustomizationID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "CustomsClearanceServiceInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "CustomsImportClassifiedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "CustomsStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "CustomsTariffQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "DamageRemarks": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DangerousGoodsApprovedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "DataSendingCapability": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DataSourceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Date": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "DebitLineAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "DebitedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "DeclarationTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DeclaredCarriageValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "DeclaredCustomsValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "DeclaredForCarriageValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "DeclaredStatisticsValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "DeliveredQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "DeliveryInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DemurrageInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Department": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Description": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DescriptionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DespatchAdviceTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DifferenceTemperatureReductionQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "DirectionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DisplayTacticTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DispositionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "District": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DocumentCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "DocumentDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DocumentHash": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DocumentID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "DocumentStatusCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/DocumentStatus_CodeType"
+      },
+    "DocumentStatusReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DocumentStatusReasonDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DocumentType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DocumentTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "DocumentationFeeAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "DueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "DurationMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "Duty": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "DutyCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "EarliestPickupDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "EarliestPickupTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "EconomicOperatorRegistryURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "EffectiveDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "EffectiveTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ElectronicDeviceDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ElectronicMail": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "EmbeddedDocumentBinaryObject": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/BinaryObjectType"
+      },
+    "EmergencyProceduresCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "EmployeeQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "EncodingCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "EndDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "EndTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "EndpointID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "EnvironmentalEmissionTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "EstimatedAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "EstimatedConsumedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "EstimatedDeliveryDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "EstimatedDeliveryTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "EstimatedDespatchDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "EstimatedDespatchTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "EstimatedOverallContractAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "EstimatedOverallContractQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "EvaluationCriterionTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "EvidenceTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExceptionResolutionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExceptionStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExchangeMarketID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ExclusionReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ExecutionRequirementCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExemptionReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ExemptionReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExpectedOperatorQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ExpectedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ExpenseCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExpiryDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ExpiryTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "Expression": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ExpressionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ExtendedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "Extension": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "FaceValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "FamilyName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "FeatureTacticTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "FeeAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "FeeDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "FileName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "FinancingInstrumentCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "FirstName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "FirstShipmentAvailibilityDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "Floor": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "FollowupContractIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ForecastPurposeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ForecastTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "FormatCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ForwarderServiceInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "FreeOfChargeIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "FreeOnBoardValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "FreightForwarderAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "FreightRateClassCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Frequency": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "FrozenDocumentIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "FrozenPeriodDaysNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "FullnessIndicationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "FullyPaidSharesIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "FundingProgram": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "FundingProgramCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "GasPressureQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "GenderCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "GeneralCargoIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "GovernmentAgreementConstraintIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "GrossTonnageMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "GrossVolumeMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "GrossWeightMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "GuaranteeTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "GuaranteedDespatchDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "GuaranteedDespatchTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "HandlingCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "HandlingInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "HashAlgorithmMethod": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "HaulageInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "HazardClassID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "HazardousCategoryCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "HazardousRegulationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "HazardousRiskIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "HeatingType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "HeatingTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "HigherTenderAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "HolderName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "HumanFoodApprovedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "HumanFoodIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "HumidityPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "ID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "IdentificationCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/CountryIdentification_CodeType"
+      },
+    "IdentificationID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ImmobilizationCertificateID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ImportanceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "IndicationIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "IndustryClassificationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Information": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "InformationURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "InhalationToxicityZoneCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "InhouseMail": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "InspectionMethodCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "InstallmentDueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "InstructionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "InstructionNote": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Instructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "InsurancePremiumAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "InsuranceValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "InventoryValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "InvoiceTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "InvoicedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "InvoicingPartyReference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "IssueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "IssueNumberID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "IssueTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "IssuerID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ItemClassificationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ItemUpdateRequestIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "JobTitle": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "JourneyID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "Justification": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "JustificationDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Keyword": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LanguageID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LastRevisionDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "LastRevisionTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "LatestDeliveryDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "LatestDeliveryTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "LatestMeterQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "LatestMeterReadingDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "LatestMeterReadingMethod": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LatestMeterReadingMethodCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "LatestPickupDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "LatestPickupTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "LatestProposalAcceptanceDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "LatestSecurityClearanceDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "LatitudeDegreesMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "LatitudeDirectionCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/LatitudeDirection_CodeType"
+      },
+    "LatitudeMinutesMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "LeadTimeMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "LegalReference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LegalStatusIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "LiabilityAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "LicensePlateID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LifeCycleStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "LimitationDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Line": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LineCountNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "LineExtensionAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "LineID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LineNumberNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "LineStatusCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/LineStatus_CodeType"
+      },
+    "ListValue": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LivestockIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "LoadingLengthMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "LoadingSequenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LocaleCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Location": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LocationID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LocationTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Login": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LogoReferenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LongitudeDegreesMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "LongitudeDirectionCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/LongitudeDirection_CodeType"
+      },
+    "LongitudeMinutesMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "LossRisk": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LossRiskResponsibilityCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "LotNumberID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LowTendersDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "LowerOrangeHazardPlacardID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "LowerTenderAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "MandateTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ManufactureDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ManufactureTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "MarkAttention": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MarkAttentionIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "MarkCare": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MarkCareIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "MarketValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "MarkingID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "MathematicOperatorCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Operator_CodeType"
+      },
+    "MaximumAdvertisementAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "MaximumAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "MaximumBackorderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MaximumCopiesNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "MaximumMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "MaximumNumberNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "MaximumOperatorQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MaximumOrderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MaximumPaidAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "MaximumPaymentInstructionsNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "MaximumPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "MaximumQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MaximumValue": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MaximumVariantQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "Measure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "MedicalFirstAidGuideCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "MeterConstant": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MeterConstantCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "MeterName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MeterNumber": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MeterReadingComments": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MeterReadingType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MeterReadingTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "MiddleName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "MimeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "MinimumAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "MinimumBackorderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MinimumImprovementBid": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MinimumInventoryQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MinimumMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "MinimumNumberNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "MinimumOrderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MinimumPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "MinimumQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MinimumValue": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MiscellaneousEventTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ModelName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "MonetaryScope": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MovieTitle": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "MultipleOrderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "MultiplierFactorNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "Name": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "NameCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "NameSuffix": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "NationalityID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "NatureCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "NegotiationDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "NetNetWeightMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "NetTonnageMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "NetVolumeMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "NetWeightMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "NetworkID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "NominationDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "NominationTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "NormalTemperatureReductionQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "Note": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "NotificationTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "OccurrenceDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "OccurrenceTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "OnCarriageIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "OneTimeChargeType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "OneTimeChargeTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "OntologyURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "OpenTenderID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "OperatingYearsQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "OptionalLineItemIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "OptionsDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "OrderIntervalDaysNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "OrderQuantityIncrementNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "OrderResponseCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "OrderTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "OrderableIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "OrderableUnit": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "OrderableUnitFactorRate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/RateType"
+      },
+    "OrganizationDepartment": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "OriginalContractingSystemID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "OriginalJobID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "OtherConditionsIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "OtherInstruction": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "OtherName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "OutstandingQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "OutstandingReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "OversupplyQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "OwnerTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PackLevelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PackQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "PackSizeNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "PackageLevelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PackagingTypeCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/PackagingType_CodeType"
+      },
+    "PackingCriteriaCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PackingMaterial": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PaidAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PaidDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "PaidTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ParentDocumentID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ParentDocumentLineReferenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ParentDocumentTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ParentDocumentVersionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PartPresentationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PartecipationPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "PartialDeliveryIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ParticipationPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "PartyCapacityAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PartyType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PartyTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PassengerQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "Password": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PayPerView": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PayableAlternativeAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PayableAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PayableRoundingAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PayerReference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PaymentAlternativeCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "PaymentChannelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PaymentCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "PaymentDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PaymentDueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "PaymentFrequencyCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PaymentID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PaymentMeansCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/PaymentMeans_CodeType"
+      },
+    "PaymentMeansID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PaymentNote": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PaymentOrderReference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PaymentPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "PaymentPurposeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PaymentTermsDetailsURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PenaltyAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PenaltySurchargePercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "PerUnitAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "Percent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "PerformanceMetricTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PerformanceValueQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "PerformingCarrierAssignedID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PersonalSituation": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PhoneNumber": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PlacardEndorsement": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PlacardNotation": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PlannedDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "PlotIdentification": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PositionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PostEventNotificationDurationMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "PostalZone": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Postbox": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PowerIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "PreCarriageIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "PreEventNotificationDurationMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "PreferenceCriterionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PrepaidAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PrepaidIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "PrepaidPaymentReferenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PreviousCancellationReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PreviousJobID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PreviousMeterQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "PreviousMeterReadingDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "PreviousMeterReadingMethod": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PreviousMeterReadingMethodCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PreviousVersionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PriceAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "PriceChangeReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PriceEvaluationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PriceRevisionFormulaDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PriceType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PriceTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PricingCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "PricingUpdateRequestIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "PrimaryAccountNumberID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "PrintQualifier": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Priority": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PrivacyCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PrizeDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PrizeIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ProcedureCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ProcessDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ProcessReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ProcessReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ProcurementSubTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ProcurementTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ProductTraceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ProfileExecutionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ProfileID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ProfileStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ProgressPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "PromotionalEventTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ProviderTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "PublishAwardIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "Purpose": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "PurposeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "QualityControlCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Quantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "QuantityDiscrepancyCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "RadioCallSignID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RailCarID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "Rank": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Rate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/RateType"
+      },
+    "ReceiptAdviceTypeCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/ReceiptAdviceType_CodeType"
+      },
+    "ReceivedDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ReceivedElectronicTenderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ReceivedForeignTenderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ReceivedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ReceivedTenderQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "Reference": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ReferenceDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ReferenceEventCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ReferenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ReferenceTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ReferencedConsignmentID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RefrigeratedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "RefrigerationOnIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "Region": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "RegisteredDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RegisteredTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "RegistrationDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RegistrationExpirationDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RegistrationID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RegistrationName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "RegistrationNationality": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "RegistrationNationalityID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RegulatoryDomain": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "RejectActionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "RejectReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "RejectReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "RejectedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "RejectionNote": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ReleaseID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ReliabilityPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "Remarks": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ReminderSequenceNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "ReminderTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ReplenishmentOwnerDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "RequestForQuotationLineID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RequestedDeliveryDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RequestedDespatchDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RequestedDespatchTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "RequestedInvoiceCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "RequestedPublicationDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RequiredCurriculaIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "RequiredCustomsID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RequiredDeliveryDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RequiredDeliveryTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "RequiredFeeAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "ResidenceType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ResidenceTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ResidentOccupantsNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "Resolution": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ResolutionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ResolutionDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ResolutionTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ResponseCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ResponseDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ResponseTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "RetailEventName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "RetailEventStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ReturnabilityIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ReturnableMaterialIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ReturnableQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "RevisedForecastLineID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "RevisionDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "RevisionStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "RevisionTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "RoamingPartnerName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "RoleCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "RoleDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Room": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "RoundingAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "SalesOrderID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SalesOrderLineID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SchemeURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SealIssuerTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SealStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SealingPartyType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SecurityClassificationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SecurityID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SellerEventID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SequenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SequenceNumberID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SequenceNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "SerialID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ServiceInformationPreferenceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ServiceName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "ServiceNumberCalled": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ServiceType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ServiceTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SettlementDiscountAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "SettlementDiscountPercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "SharesNumberQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ShippingMarks": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ShippingOrderID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ShippingPriorityLevelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ShipsRequirements": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ShortQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ShortageActionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SignatureID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SignatureMethod": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SizeTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SoleProprietorshipIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "SourceCurrencyBaseRate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/RateType"
+      },
+    "SourceCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "SourceForecastIssueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "SourceForecastIssueTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "SourceValueMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "SpecialInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SpecialSecurityIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "SpecialServiceInstructions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SpecialTerms": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SpecialTransportRequirements": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SpecificationID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SpecificationTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SplitConsignmentIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "StartDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "StartTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "StatementTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "StatusAvailableIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "StatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "StatusReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "StatusReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "StreetName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "SubcontractingConditionsCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SubmissionDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "SubmissionDueDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "SubmissionMethodCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SubscriberID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SubscriberType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SubscriberTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "SubstitutionStatusCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/SubstitutionStatus_CodeType"
+      },
+    "SuccessiveSequenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SummaryDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "SupplierAssignedAccountID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "SupplyChainActivityTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TareWeightMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "TargetCurrencyBaseRate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/RateType"
+      },
+    "TargetCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "TargetInventoryQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TargetServicePercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "TariffClassCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TariffCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TariffDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TaxAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TaxCurrencyCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/Currency_CodeType"
+      },
+    "TaxEnergyAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TaxEnergyBalanceAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TaxEnergyOnAccountAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TaxEvidenceIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "TaxExclusiveAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TaxExemptionReason": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TaxExemptionReasonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TaxIncludedIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "TaxInclusiveAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TaxLevelCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TaxPointDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "TaxTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TaxableAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TechnicalCommitteeDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TechnicalName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "TelecommunicationsServiceCall": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TelecommunicationsServiceCallCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TelecommunicationsServiceCategory": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TelecommunicationsServiceCategoryCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TelecommunicationsSupplyType": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TelecommunicationsSupplyTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Telefax": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Telephone": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TenderEnvelopeID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "TenderEnvelopeTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TenderResultCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TenderTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TendererRequirementTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TendererRoleCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TestMethod": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "Text": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ThirdPartyPayerIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "ThresholdAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "ThresholdQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "ThresholdValueComparisonCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TierRange": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TierRatePercent": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/PercentType"
+      },
+    "TimeAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TimeDeltaDaysQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TimeFrequencyCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TimezoneOffset": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TimingComplaint": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TimingComplaintCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "Title": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ToOrderIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "TotalAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalBalanceAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalConsumedQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TotalCreditAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalDebitAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalDeliveredQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TotalGoodsItemQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TotalInvoiceAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalMeteredQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TotalPackageQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TotalPackagesQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TotalPaymentAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalTaskAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalTaxAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TotalTransportHandlingUnitQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "TraceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "TrackingDeviceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TrackingID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "TradeItemPackingLabelingTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TradeServiceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TradingRestrictions": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TrainID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "TransactionCurrencyTaxAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "TransitDirectionCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportAuthorizationCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportEmergencyCardCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportEquipmentTypeCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/TransportEquipmentType_CodeType"
+      },
+    "TransportEventTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportExecutionPlanReferenceID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "TransportExecutionStatusCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportHandlingUnitTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportMeansTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportModeCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/TransportMode_CodeType"
+      },
+    "TransportServiceCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TransportServiceProviderRemarks": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TransportServiceProviderSpecialTerms": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TransportUserRemarks": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TransportUserSpecialTerms": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TransportationServiceDescription": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "TransportationServiceDetailsURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "TransportationStatusTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "TypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "UBLVersionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "UNDGCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "URI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "UUID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "UnknownPriceIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "UpperOrangeHazardPlacardID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "UrgencyCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "UtilityStatementTypeCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ValidateProcess": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ValidateTool": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ValidateToolVersion": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ValidationDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "ValidationResultCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "ValidationTime": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TimeType"
+      },
+    "ValidatorID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "ValidityStartDate": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/DateType"
+      },
+    "Value": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ValueAmount": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/AmountType"
+      },
+    "ValueMeasure": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/MeasureType"
+      },
+    "ValueQualifier": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "ValueQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "VarianceQuantity": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/QuantityType"
+      },
+    "VariantConstraintIndicator": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IndicatorType"
+      },
+    "VariantID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "VersionID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "VesselID": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "VesselName": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NameType"
+      },
+    "WarrantyInformation": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "WebsiteURI": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/IdentifierType"
+      },
+    "WeekDayCode": {
+      "$ref": "UBL-QualifiedDataTypes-2.1#/definitions/WeekDay_CodeType"
+      },
+    "Weight": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "WeightNumeric": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/NumericType"
+      },
+    "WeightingAlgorithmCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "WorkPhase": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      },
+    "WorkPhaseCode": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/CodeType"
+      },
+    "XPath": {
+      "$ref": "BDNDR-UnqualifiedDataTypes-1.1#/definitions/TextType"
+      }
+    }
+  }

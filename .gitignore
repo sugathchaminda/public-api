@@ -1,0 +1,27 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# VSCode
+.vscode/*
+
+# Jetbrains
+.idea/
+
+# DB-data volume for docker
+db-data
+
+# Jest coverage
+coverage
+
+# codeship encryption
+codeship.aes
+
+# ignore redoc static html bundle
+redoc-static.html
+
+# ignore any /dist files
+/dist/*

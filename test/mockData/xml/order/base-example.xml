@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Order xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+       xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:order:3</cbc:CustomizationID>
+    <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:order_only:3</cbc:ProfileID>
+    <cbc:ID>1234567</cbc:ID>
+    <cbc:IssueDate>2020-12-10</cbc:IssueDate>
+    <cbc:DocumentCurrencyCode>SEK</cbc:DocumentCurrencyCode>
+    <cac:ValidityPeriod>
+        <cbc:EndDate>2021-06-30</cbc:EndDate>
+    </cac:ValidityPeriod>
+    <cac:OriginatorDocumentReference>
+      <cbc:ID>5435235</cbc:ID>
+    </cac:OriginatorDocumentReference>
+    <cac:Contract>
+        <cbc:ID>AVT123</cbc:ID>
+    </cac:Contract>
+    <cac:BuyerCustomerParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="0007">2021002114</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="0007">2021002114</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Arbetsförmedlingen</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Gatan 1</cbc:StreetName>
+                <cbc:CityName>Stockholm</cbc:CityName>
+                <cbc:PostalZone>11399</cbc:PostalZone>
+                <cac:AddressLine>
+                    <cbc:Line>Huvudkontoret</cbc:Line>
+                </cac:AddressLine>
+                <cac:Country>
+                    <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Arbetsförmedlingen</cbc:RegistrationName>
+                <cbc:CompanyID schemeID="0007">2021002114</cbc:CompanyID>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>Christina Beställare</cbc:Name>
+                <cbc:ElectronicMail>christina.bestallare@arbetsformedlingen.com</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:BuyerCustomerParty>
+    <cac:SellerSupplierParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="0007">14528798654</cbc:EndpointID>
+            <cac:PostalAddress>
+                <cbc:StreetName>Leverantörsgatan 1</cbc:StreetName>
+                <cbc:AdditionalStreetName>11111</cbc:AdditionalStreetName>
+                <cbc:CityName>Stockholm</cbc:CityName>
+                <cac:Country>
+                    <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Leverantören AB</cbc:RegistrationName>
+                <cbc:CompanyID schemeID="0007">14528798654</cbc:CompanyID>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:SellerSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="0007">14528798654</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PostalAddress>
+                <cbc:StreetName>Skanningsgatan 1</cbc:StreetName>
+                <cbc:CityName>Stockholm</cbc:CityName>
+                <cbc:PostalZone>11111</cbc:PostalZone>
+                <cac:AddressLine>
+                    <cbc:Line>Huvudkontoret</cbc:Line>
+                </cac:AddressLine>
+                <cac:Country>
+                    <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Arbetsförmedlingen</cbc:RegistrationName>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:Delivery>
+        <cac:DeliveryLocation>
+            <cbc:ID schemeID="0007">14528798654</cbc:ID>
+            <cac:Address>
+                <cbc:StreetName>Manetstigen 388</cbc:StreetName>
+                <cbc:CityName>Onsala</cbc:CityName>
+                <cbc:PostalZone>43933</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:Address>
+        </cac:DeliveryLocation>
+        <cac:RequestedDeliveryPeriod>
+            <cbc:StartDate>2021-01-01</cbc:StartDate>
+            <cbc:EndDate>2021-06-30</cbc:EndDate>
+        </cac:RequestedDeliveryPeriod>
+        <cac:DeliveryParty>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="0007">14528798654</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Filialen 1</cbc:Name>
+            </cac:PartyName>
+        </cac:DeliveryParty>
+        <cac:Shipment>
+            <cbc:ID>NA</cbc:ID>
+            <cac:TransportHandlingUnit>
+                <cbc:ShippingMarks>Genomförandereferens_123</cbc:ShippingMarks>
+            </cac:TransportHandlingUnit>
+        </cac:Shipment>
+    </cac:Delivery>
+    <cac:AnticipatedMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="SEK">11590.00</cbc:LineExtensionAmount>
+        <cbc:PayableAmount currencyID="SEK">11590.00</cbc:PayableAmount>
+    </cac:AnticipatedMonetaryTotal>
+    <cac:OrderLine>
+        <cac:LineItem>
+            <cbc:ID>001</cbc:ID>
+            <cbc:Quantity unitCode="DAY">19.00</cbc:Quantity>
+            <cbc:LineExtensionAmount currencyID="SEK">1805.00</cbc:LineExtensionAmount>
+            <cac:Delivery>
+                <cac:RequestedDeliveryPeriod>
+                    <cbc:StartDate>2021-01-01</cbc:StartDate>
+                    <cbc:EndDate>2021-01-31</cbc:EndDate>
+                </cac:RequestedDeliveryPeriod>
+            </cac:Delivery>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="SEK">95.00</cbc:PriceAmount>
+            </cac:Price>
+            <cac:Item>
+                <cbc:Name>Grundersättning</cbc:Name>
+                <cac:SellersItemIdentification>
+                    <cbc:ID>166</cbc:ID>
+                </cac:SellersItemIdentification>
+            </cac:Item>
+        </cac:LineItem>
+    </cac:OrderLine>
+    <cac:OrderLine>
+        <cac:LineItem>
+            <cbc:ID>002</cbc:ID>
+            <cbc:Quantity unitCode="DAY">20.00</cbc:Quantity>
+            <cbc:LineExtensionAmount currencyID="SEK">1900.00</cbc:LineExtensionAmount>
+            <cac:Delivery>
+                <cac:RequestedDeliveryPeriod>
+                    <cbc:StartDate>2021-02-01</cbc:StartDate>
+                    <cbc:EndDate>2021-02-28</cbc:EndDate>
+                </cac:RequestedDeliveryPeriod>
+            </cac:Delivery>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="SEK">95.00</cbc:PriceAmount>
+            </cac:Price>
+            <cac:Item>
+                <cbc:Name>Grundersättning</cbc:Name>
+                <cac:SellersItemIdentification>
+                    <cbc:ID>166</cbc:ID>
+                </cac:SellersItemIdentification>
+            </cac:Item>
+        </cac:LineItem>
+    </cac:OrderLine>
+    <cac:OrderLine>
+        <cac:LineItem>
+            <cbc:ID>003</cbc:ID>
+            <cbc:Quantity unitCode="DAY">21.00</cbc:Quantity>
+            <cbc:LineExtensionAmount currencyID="SEK">1995.00</cbc:LineExtensionAmount>
+            <cac:Delivery>
+                <cac:RequestedDeliveryPeriod>
+                    <cbc:StartDate>2021-03-01</cbc:StartDate>
+                    <cbc:EndDate>2021-03-31</cbc:EndDate>
+                </cac:RequestedDeliveryPeriod>
+            </cac:Delivery>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="SEK">95.00</cbc:PriceAmount>
+            </cac:Price>
+            <cac:Item>
+                <cbc:Name>Grundersättning</cbc:Name>
+                <cac:SellersItemIdentification>
+                    <cbc:ID>166</cbc:ID>
+                </cac:SellersItemIdentification>
+            </cac:Item>
+        </cac:LineItem>
+    </cac:OrderLine>
+    <cac:OrderLine>
+        <cac:LineItem>
+            <cbc:ID>004</cbc:ID>
+            <cbc:Quantity unitCode="DAY">22.00</cbc:Quantity>
+            <cbc:LineExtensionAmount currencyID="SEK">2090.00</cbc:LineExtensionAmount>
+            <cac:Delivery>
+                <cac:RequestedDeliveryPeriod>
+                    <cbc:StartDate>2021-04-01</cbc:StartDate>
+                    <cbc:EndDate>2021-04-30</cbc:EndDate>
+                </cac:RequestedDeliveryPeriod>
+            </cac:Delivery>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="SEK">95.00</cbc:PriceAmount>
+            </cac:Price>
+            <cac:Item>
+                <cbc:Name>Grundersättning</cbc:Name>
+                <cac:SellersItemIdentification>
+                    <cbc:ID>166</cbc:ID>
+                </cac:SellersItemIdentification>
+            </cac:Item>
+        </cac:LineItem>
+    </cac:OrderLine>
+    <cac:OrderLine>
+        <cac:LineItem>
+            <cbc:ID>005</cbc:ID>
+            <cbc:Quantity unitCode="DAY">20.00</cbc:Quantity>
+            <cbc:LineExtensionAmount currencyID="SEK">1900.00</cbc:LineExtensionAmount>
+            <cac:Delivery>
+                <cac:RequestedDeliveryPeriod>
+                    <cbc:StartDate>2021-05-01</cbc:StartDate>
+                    <cbc:EndDate>2021-05-31</cbc:EndDate>
+                </cac:RequestedDeliveryPeriod>
+            </cac:Delivery>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="SEK">95.00</cbc:PriceAmount>
+            </cac:Price>
+            <cac:Item>
+                <cbc:Name>Grundersättning</cbc:Name>
+                <cac:SellersItemIdentification>
+                    <cbc:ID>166</cbc:ID>
+                </cac:SellersItemIdentification>
+            </cac:Item>
+        </cac:LineItem>
+    </cac:OrderLine>
+    <cac:OrderLine>
+        <cac:LineItem>
+            <cbc:ID>006</cbc:ID>
+            <cbc:Quantity unitCode="DAY">20.00</cbc:Quantity>
+            <cbc:LineExtensionAmount currencyID="SEK">1900.00</cbc:LineExtensionAmount>
+            <cac:Delivery>
+                <cac:RequestedDeliveryPeriod>
+                    <cbc:StartDate>2021-06-01</cbc:StartDate>
+                    <cbc:EndDate>2021-06-30</cbc:EndDate>
+                </cac:RequestedDeliveryPeriod>
+            </cac:Delivery>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="SEK">95.00</cbc:PriceAmount>
+            </cac:Price>
+            <cac:Item>
+                <cbc:Name>Grundersättning</cbc:Name>
+                <cac:SellersItemIdentification>
+                    <cbc:ID>166</cbc:ID>
+                </cac:SellersItemIdentification>
+            </cac:Item>
+        </cac:LineItem>
+    </cac:OrderLine>
+</Order>

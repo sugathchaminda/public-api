@@ -1,0 +1,8 @@
+apiDefinitions:
+  openapi: ./src/docs/schemas/openapi.yaml
+lint:
+  extends:
+    - recommended
+  rules:
+    no-invalid-media-type-examples:
+      severity: warn

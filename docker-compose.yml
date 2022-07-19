@@ -1,0 +1,40 @@
+version: "3.1"
+
+services:
+  localstack:
+    image: localstack/localstack:0.13.0
+    network_mode: bridge
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      - SERVICES=sqs,s3,dynamodb
+      - DEBUG=${DEBUG- }
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - HOST_TMP_FOLDER=${TMPDIR:-/tmp/}localstack
+    volumes:
+      - "${TMPDIR:-/tmp}/localstack:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./aws:/docker-entrypoint-initaws.d
+  local-data-api:
+    image: koxudaxi/local-data-api
+    restart: always
+    environment:
+      ENGINE: PostgreSQLJDBC
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secretpassword
+      RESOURCE_ARN: "arn:aws:rds:eu-west-1:290634095615:cluster:dummy"
+      SECRET_ARN: "arn:aws:secretsmanager:eu-west-1:290634095615:secret:dummy"
+    ports:
+      - "8080:80"
+  db:
+    image: postgres:10.7-alpine
+    restart: always
+    volumes:
+      - ./db-data/var/lib/postgresql:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: mdsdb
+    ports:
+      - "5432:5432"
